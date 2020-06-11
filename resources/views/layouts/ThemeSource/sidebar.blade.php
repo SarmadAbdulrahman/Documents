@@ -2,7 +2,7 @@
 @section('Sidebar')
 <!-- Page Container -->
 
-<body>
+
 <!-- Loading Container
 <div class="loading-container">
     <div class="loader"></div>
@@ -86,78 +86,25 @@
             <!-- Sidebar Menu -->
             <ul class="nav sidebar-menu">
                 <!--Dashboard-->
-                <li class="active">
-                    <a href="index.html">
-                        <i class="menu-icon glyphicon glyphicon-home"></i>
-                        <span class="menu-text"> Dashboard </span>
-                    </a>
-                </li>
-                <!--Databoxes-->
-                <li>
-                    <a href="databoxes.html">
-                        <i class="menu-icon glyphicon glyphicon-tasks"></i>
-                        <span class="menu-text"> Data Boxes </span>
-                    </a>
-                </li>
-                <!--Widgets-->
-                <li>
-                    <a href="widgets.html">
-                        <i class="menu-icon fa fa-th"></i>
-                        <span class="menu-text"> Widgets </span>
-                    </a>
-                </li>
+
                 <!--UI Elements-->
                 <li>
                     <a href="#" class="menu-dropdown">
-                        <i class="menu-icon fa fa-desktop"></i>
-                        <span class="menu-text"> Elements </span>
+                        <i class="menu-icon fa fa-users"></i>
+                        <span class="menu-text"> Users Management </span>
                         <i class="menu-expand"></i>
                     </a>
 
                     <ul class="submenu">
                         <li>
-                            <a href="elements.html">
-                                <span class="menu-text">Basic Elements</span>
+                            <a href="{{url('SystemAdministrator/CreateUser')}}">
+                                <span class="menu-text">Create User</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="menu-dropdown">
-                                    <span class="menu-text">
-                                        Icons
-                                    </span>
-                                <i class="menu-expand"></i>
-                            </a>
 
-                            <ul class="submenu">
-                                <li>
-                                    <a href="font-awesome.html">
-                                        <i class="menu-icon fa fa-rocket"></i>
-                                        <span class="menu-text">Font Awesome</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="glyph-icons.html">
-                                        <i class="menu-icon glyphicon glyphicon-stats"></i>
-                                        <span class="menu-text">Glyph Icons</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="typicon.html">
-                                        <i class="menu-icon typcn typcn-location-outline"></i>
-                                        <span class="menu-text"> Typicons</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="weather-icons.html">
-                                        <i class="menu-icon wi wi-hot"></i>
-                                        <span class="menu-text">Weather Icons</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
                         <li>
                             <a href="tabs.html">
-                                <span class="menu-text">Tabs & Accordions</span>
+                                <span class="menu-text">Change User Role</span>
                             </a>
                         </li>
                         <li>

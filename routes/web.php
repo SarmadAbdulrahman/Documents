@@ -25,7 +25,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes SystemAdministrator
@@ -39,7 +38,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdministrator']], function () {
-    Route::get('/','Admin\AdminController@index');
+    // CreateUser
+        Route::get('/','Admin\AdminController@index');
+    Route::get('/CreateUser','Admin\AdminController@create');
 
 });
 

@@ -7,12 +7,12 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="fa fa-home"></i>
-                    <a href="#">SystemAdministrator</a>
+                    <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Users</a>
+                    <a href="#">Tables</a>
                 </li>
-                <li class="active">Create new User</li>
+                <li class="active">Simple and Responsive</li>
             </ul>
         </div>
         <!-- /Page Breadcrumb -->
@@ -20,10 +20,10 @@
         <div class="page-header position-relative">
             <div class="header-title">
                 <h1>
-                    System Administrator
+                    Tables
                     <small>
                         <i class="fa fa-angle-right"></i>
-                        Users
+                        simple and responsive tables
                     </small>
                 </h1>
             </div>
@@ -32,7 +32,7 @@
                 <a class="sidebar-toggler" href="#">
                     <i class="fa fa-arrows-h"></i>
                 </a>
-                <a class="refresh" id="refresh-toggler" href="/SystemAdministrator">
+                <a class="refresh" id="refresh-toggler" href="default.htm">
                     <i class="glyphicon glyphicon-refresh"></i>
                 </a>
                 <a class="fullscreen" id="fullscreen-toggler" href="#">
@@ -44,14 +44,14 @@
         <!-- /Page Header -->
         <!-- Page Body -->
         <div class="page-body">
-            <h5 class="row-title"><i class="typcn typcn-th-small"></i>Users Option</h5>
+            <h5 class="row-title"><i class="typcn typcn-th-small"></i>Simple Tables</h5>
 
 
             <div class="row">
                 <div class="col-xs-12 col-md-12">
                     <div class="widget">
                         <div class="widget-header  with-footer">
-                            <span class="widget-caption">Create New Users</span>
+                            <span class="widget-caption">Responsive Flip Scroll Tables</span>
                             <div class="widget-buttons">
                                 <a href="#" data-toggle="maximize">
                                     <i class="fa fa-expand"></i>
@@ -65,6 +65,20 @@
                             </div>
                         </div>
 
+
+                        <div class="widget-body">
+                            <div class="alert alert-info fade in alert-radius-bordered alert-shadowed">
+                                <button class="close" data-dismiss="alert">
+                                    ×
+                                </button>
+                                <i class="fa-fw fa fa-info"></i>
+
+                                <strong>Flip Scroll Table:</strong> Flips between horizontal and vertical scrolls according to page width
+                            </div>
+                            <div class="flip-scroll">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

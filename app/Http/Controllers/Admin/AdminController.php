@@ -29,4 +29,16 @@ class AdminController extends Controller
 
 
     }
+
+    public function create()
+    {
+
+        return view('Admin.CreateUser');
+
+    }
+
+
+
+
+
 }

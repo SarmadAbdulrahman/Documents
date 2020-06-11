@@ -24,3 +24,4 @@
 <script src="{{asset("assets/js/charts/flot/jquery.flot.tooltip.js")}}"></script>
 <script src="{{asset("assets/js/charts/flot/jquery.flot.orderbars.js")}}"></script>
 @endsection
+
