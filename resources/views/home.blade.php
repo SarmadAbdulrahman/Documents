@@ -1,5 +1,4 @@
 @extends('layouts.ThemeSource.sidebar')
-
 @section('content')
     <!-- Page Content -->
     <div class="page-content">
@@ -65,6 +64,8 @@
                         </a>
                     </div>
                 </div>
+
+
                 <div class="widget-body">
                     <div class="alert alert-info fade in alert-radius-bordered alert-shadowed">
                         <button class="close" data-dismiss="alert">
@@ -432,6 +433,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+</div>
+</div>
+</div>
+</div>
+
 @endsection
 @extends('layouts.ThemeSource.footer')

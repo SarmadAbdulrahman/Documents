@@ -39,18 +39,19 @@
                                     <img src="{{asset("assets/img/avatars/adam-jansen.jpg")}}">
                                 </div>
                                 <section>
-                                    <h2><span class="profile"><span>Sarmad</span></span></h2>
+                                    <h2><span class="profile"><span>{{auth()->user()->name}}</span></span></h2>
                                 </section>
                             </a>
                             <!--Login Area Dropdown-->
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
-                                <li class="username"><a>Sarmad Abdulrahman</a></li>
+                                <li class="username"><a>{{auth()->user()->name}}</a></li>
                                 <!--Avatar Area-->
 
                                 <li class="dropdown-footer">
-                                    <a href="login.html">
-                                        Sign out
-                                    </a>
+                                    <form  method="POST" action="{{url('logout')}}">
+                                        @csrf
+                                        <button type="submit">Sign out</button>
+                                    </form>
                                 </li>
                             </ul>
                             <!--/Login Area Dropdown-->

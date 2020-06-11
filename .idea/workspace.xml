@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1dc18d71-e8ad-4b79-9f8b-98ac2a22c497" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/ThemeSource/Header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/ThemeSource/Header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/ThemeSource/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/ThemeSource/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591769901738</updated>
       <workItem from="1591769905471" duration="6940000" />
-      <workItem from="1591852941455" duration="5030000" />
+      <workItem from="1591852941455" duration="6275000" />
     </task>
     <servers />
   </component>
