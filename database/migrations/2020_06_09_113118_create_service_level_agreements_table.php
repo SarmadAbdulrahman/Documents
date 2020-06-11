@@ -15,8 +15,8 @@ class CreateServiceLevelAgreementsTable extends Migration
     {
         Schema::create('service_level_agreements', function (Blueprint $table) {
             $table->id();
-            $table->intager('service_id');
-            $table->intager('hours');
+            $table->integer('service_id');
+            $table->integer('hours');
             $table->timestamps();
         });
     }
