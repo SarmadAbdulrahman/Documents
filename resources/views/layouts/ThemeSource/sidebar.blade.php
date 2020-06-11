@@ -103,35 +103,22 @@
                         </li>
 
                         <li>
-                            <a href="tabs.html">
+                            <a href="#">
                                 <span class="menu-text">Change User Role</span>
                             </a>
                         </li>
                         <li>
-                            <a href="alerts.html">
-                                <span class="menu-text">Alerts & Tooltips</span>
+                            <a href="#">
+                                <span class="menu-text">Reset Pass</span>
                             </a>
                         </li>
                         <li>
-                            <a href="modals.html">
+                            <a href="#">
                                 <span class="menu-text">Modals & Wells</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="buttons.html">
-                                <span class="menu-text">Buttons</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="nestable-list.html">
-                                <span class="menu-text"> Nestable List</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="treeview.html">
-                                <span class="menu-text">Treeview</span>
-                            </a>
-                        </li>
+
+
                     </ul>
                 </li>
                 <!--Tables-->
