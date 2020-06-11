@@ -24,7 +24,16 @@ class HomeController extends Controller
     public function index()
     {
 
+        $UserRoloes=auth()->user()->getRoleNames()[0];
 
-        return view('home');
+
+
+        switch ($UserRoloes)
+        {
+            case "SystemAdministrator": return redirect("SystemAdministrator"); break;
+            default: dd("on");
+        }
+
+
     }
 }

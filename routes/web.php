@@ -17,6 +17,39 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['register'=>false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes SystemAdministrator
+|--------------------------------------------------------------------------
+| this is for SystemAdministrator of the system
+|
+|
+|
+|
+*/
+
+
+Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdministrator']], function () {
+    Route::get('/','Admin\AdminController@index');
+
+});
+
+
+
+
+
+
+
+
+
+
+
