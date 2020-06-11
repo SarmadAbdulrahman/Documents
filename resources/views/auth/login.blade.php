@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.ThemeSource.Header')
 
 @section('content')
 <div class="container">
