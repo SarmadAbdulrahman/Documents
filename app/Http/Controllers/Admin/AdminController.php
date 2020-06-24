@@ -60,7 +60,8 @@ class AdminController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['status'=>'fail','reasons'=>$validator->messages()],200);
+
+            return response()->json(['status'=>'fail','reasons'=>$validator->messages()],400);
         }
 
         // this is new way of beer  Role
