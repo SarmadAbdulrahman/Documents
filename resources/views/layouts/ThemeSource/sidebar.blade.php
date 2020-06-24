@@ -109,14 +109,10 @@
                         </li>
                         <li>
                             <a href="#">
-                                <span class="menu-text">Reset Pass</span>
+                                <span class="menu-text">Reset Password</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <span class="menu-text">Modals & Wells</span>
-                            </a>
-                        </li>
+
 
 
                     </ul>
