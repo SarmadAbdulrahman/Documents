@@ -51,6 +51,18 @@ class AdminController extends Controller
     public  function StoreUser(Request $request)
     {
 
+
+
+        $validator = Validator::make($request->all(), [
+            'emailInput' => 'required|email|unique:users',
+            'userameInput' => 'required|string|max:50',
+            'passwordInput' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['status'=>'fail','reasons'=>$validator->messages()]);
+        }
+
         // this is new way of beer  Role
        $user= User::create([
              'name'=>$request['userameInput']
