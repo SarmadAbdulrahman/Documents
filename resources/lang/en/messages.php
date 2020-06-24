@@ -1,5 +1,6 @@
 <?php
 return [
-    'registration' => 'registration form'
+    'registration' => 'registration form',
+    'Save' => 'save'
 ];
 ?>

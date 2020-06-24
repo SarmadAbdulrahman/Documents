@@ -7,12 +7,12 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="fa fa-home"></i>
-                    <a href="#">SystemAdministrator</a>
+                    <a href="#">Client Agent</a>
                 </li>
                 <li>
-                    <a href="#">Users</a>
+                    <a href="#">Ticket</a>
                 </li>
-                <li class="active">Create New User</li>
+                <li class="active">create new  Ticket</li>
             </ul>
         </div>
         <!-- /Page Breadcrumb -->
@@ -22,10 +22,10 @@
                 <h1>
 
 
-                    Users
+                    Tickets
                     <small>
                         <i class="fa fa-angle-right"></i>
-                        Create New User
+                        create a Ticket
                     </small>
                 </h1>
             </div>
@@ -46,7 +46,7 @@
         <!-- /Page Header -->
         <!-- Page Body -->
         <div class="page-body">
-            <h5 class="row-title"><i class="typcn typcn-th-small"></i>Create Users</h5>
+            <h5 class="row-title"><i class="typcn typcn-th-small"></i>Create Ticket</h5>
             <div class="row">
 
 
@@ -105,7 +105,7 @@
 
 
                                             <hr class="wide"/>
-                                            <button  type="submit"  class="btn btn-blue">Register</button>
+                                            <button  type="submit"  class="btn btn-blue">{{ trans('messages.Save') }}</button>
                                         </form>
                                     </div>
 

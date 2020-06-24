@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'registration' => 'لوحه التسجيل'
+    'registration' => 'لوحه التسجيل',
+     'Save' => 'save'
 ];
 ?>
