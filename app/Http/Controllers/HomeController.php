@@ -31,6 +31,7 @@ class HomeController extends Controller
         switch ($UserRoloes)
         {
             case "SystemAdministrator": return redirect("SystemAdministrator"); break;
+            case "ClientAgent": return redirect("ClientAgent"); break;
             default: dd("on");
         }
 

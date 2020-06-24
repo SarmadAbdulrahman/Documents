@@ -32,7 +32,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 | this is for SystemAdministrator of the system
 |
 |
-|
+|   ClientAgent
 |
 */
 
@@ -42,6 +42,18 @@ Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdmin
         Route::get('/','Admin\AdminController@index');
         Route::get('/CreateUser','Admin\AdminController@create');
         Route::post('/StoreUser','Admin\AdminController@StoreUser');
+
+
+});
+
+
+
+
+Route::group(['prefix'=>'ClientAgent','middleware' => ['role:ClientAgent']], function () {
+    // CreateUser
+    Route::get('/','ClientAgent\ClientAgentController@index');
+    Route::get('/CreateTicket','ClientAgent\ClientAgentController@CreateTicket');
+
 
 
 });

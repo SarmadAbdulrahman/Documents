@@ -99,16 +99,14 @@
 
                                             <div class="form-group">
                                                 <select class="form-control Roles" name="Role">
-                                                    @foreach($Roles as $Role)
-                                                        <option value="{{$Role->id}}">{{$Role->Arabic_Name}}</option>
-                                                    @endforeach
+
                                                 </select>
                                             </div>
 
 
                                             <hr class="wide"/>
                                             <button  type="submit"  class="btn btn-blue">Register</button>
-                                            </form>
+                                        </form>
                                     </div>
 
 
@@ -155,7 +153,7 @@
 
 
 
-        });
+            });
         });
     </script>
 @endsection

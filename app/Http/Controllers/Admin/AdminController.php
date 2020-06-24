@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 use App\Department;
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
+use Validator;
 
 class AdminController extends Controller
 {
@@ -48,8 +51,23 @@ class AdminController extends Controller
     public  function StoreUser(Request $request)
     {
 
+        // this is new way of beer  Role
+       $user= User::create([
+             'name'=>$request['userameInput']
+            , 'email'=>$request['emailInput']
+            , 'password'=>Hash::make($request['passwordInput'])
+        ]);
 
-        DD($request);
+
+        $user->assignRole(Role::find($request["Role"]));
+
+
+        return response()->json(['status'=>'success']);
+
+
+
+
+
 
     }
 
