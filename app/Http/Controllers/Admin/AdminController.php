@@ -60,7 +60,7 @@ class AdminController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['status'=>'fail','reasons'=>$validator->messages()]);
+            return response()->json(['status'=>'fail','reasons'=>$validator->messages()],200);
         }
 
         // this is new way of beer  Role
@@ -71,15 +71,15 @@ class AdminController extends Controller
         ]);
 
 
+
         $user->assignRole(Role::find($request["Role"]));
 
 
-        return response()->json(['status'=>'success']);
 
 
 
 
-
+        return response()->json(['status'=>'success'],200);
 
     }
 
