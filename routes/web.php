@@ -40,7 +40,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdministrator']], function () {
     // CreateUser
         Route::get('/','Admin\AdminController@index');
-    Route::get('/CreateUser','Admin\AdminController@create');
+        Route::get('/CreateUser','Admin\AdminController@create');
+        Route::post('/StoreUser','Admin\AdminController@StoreUser');
+
 
 });
 

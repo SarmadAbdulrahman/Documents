@@ -20,6 +20,8 @@
         <div class="page-header position-relative">
             <div class="header-title">
                 <h1>
+
+
                     Users
                     <small>
                         <i class="fa fa-angle-right"></i>
@@ -46,116 +48,110 @@
         <div class="page-body">
             <h5 class="row-title"><i class="typcn typcn-th-small"></i>Create Users</h5>
             <div class="row">
+
+
                 <div class="col-lg-12 col-sm-12 col-xs-12">
                     <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12">
                             <div class="widget flat radius-bordered">
                                 <div class="widget-header bg-blue">
-                                    <span class="widget-caption">Registration Form</span>
+                                    <span class="widget-caption">{{ trans('messages.registration') }} </span>
                                 </div>
                                 <div class="widget-body">
                                     <div id="registration-form">
-                                        <form role="form">
+                                        <form role="form" method="post" id="cc" action="{{url('SystemAdministrator/StoreUser')}}">
+                                            @csrf
                                             <div class="form-title">
                                                 User Information
                                             </div>
+
                                             <div class="form-group">
-                                                                <span class="input-icon icon-right">
-                                                                    <input type="text" class="form-control" id="userameInput" placeholder="Username">
-                                                                    <i class="glyphicon glyphicon-user circular"></i>
-                                                                </span>
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" class="form-control" name="userameInput" id="userameInput" placeholder="Username">
+                                                    <i class="glyphicon glyphicon-user circular"></i>
+                                                </span>
                                             </div>
+
+
                                             <div class="form-group">
-                                                                <span class="input-icon icon-right">
-                                                                    <input type="text" class="form-control" id="emailInput" placeholder="Email Address">
-                                                                    <i class="fa fa-envelope-o circular"></i>
-                                                                </span>
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" class="form-control"  name="emailInput" id="emailInput" placeholder="Email Address">
+                                                    <i class="fa fa-envelope-o circular"></i>
+                                                </span>
                                             </div>
+
+
+
+
+
                                             <div class="form-group">
-                                                                <span class="input-icon icon-right">
-                                                                    <input type="text" class="form-control" id="passwordInput" placeholder="Password">
-                                                                    <i class="fa fa-lock circular"></i>
-                                                                </span>
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" class="form-control"  name="passwordInput" id="passwordInput" placeholder="Password">
+                                                    <i class="fa fa-lock circular"></i>
+                                                </span>
                                             </div>
+
+
+
                                             <div class="form-group">
-                                                                <span class="input-icon icon-right">
-                                                                    <input type="text" class="form-control" id="confirmPasswordInput" placeholder="Confirm Password">
-                                                                    <i class="fa fa-lock circular"></i>
-                                                                </span>
+                                                <select class="form-control Roles" name="Role">
+                                                    @foreach($Roles as $Role)
+                                                        <option value="{{$Role->id}}">{{$Role->Arabic_Name}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
-                                            <div class="form-title">
-                                                Personal Information
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                                        <span class="input-icon icon-right">
-                                                                            <input type="text" class="form-control" placeholder="Name">
-                                                                            <i class="fa fa-user"></i>
-                                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                                        <span class="input-icon icon-right">
-                                                                            <input type="text" class="form-control" placeholder="Family">
-                                                                            <i class="fa fa-user"></i>
-                                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                                        <span class="input-icon icon-right">
-                                                                            <input type="text" class="form-control" placeholder="Phone">
-                                                                            <i class="glyphicon glyphicon-earphone"></i>
-                                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                                        <span class="input-icon icon-right">
-                                                                            <input type="text" class="form-control" placeholder="Mobile">
-                                                                            <i class="glyphicon glyphicon-phone"></i>
-                                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr class="wide" />
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                                        <span class="input-icon icon-right">
-                                                                            <input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" placeholder="Birth Date">
-                                                                            <i class="fa fa-calendar"></i>
-                                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                                        <span class="input-icon icon-right">
-                                                                            <input type="text" class="form-control" placeholder="Birth Place">
-                                                                            <i class="fa fa-globe"></i>
-                                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" class="colored-blue">
-                                                        <span class="text">Auto Sign In After Registration</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="btn btn-blue">Register</button>
-                                        </form>
+
+
+                                            <hr class="wide"/>
+                                            <button  type="submit"  class="btn btn-blue">Register</button>
+                                            </form>
                                     </div>
+
+
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 @endsection
 @extends('layouts.ThemeSource.footer')
+@section('js')
+    <script>
+        $(document).ready(function () {
+            // this is for get a way  department
+            $('.Roles').select2({
+                placeholder: 'Select Roles'
+            });
+
+            //  $("#myForm").submit();
+
+            var frm = $('#cc');
+
+
+            frm.submit(function (e) {
+
+                e.preventDefault();
+
+                $.ajax({
+                    type: frm.attr('method'),
+                    url: frm.attr('action'),
+                    data: frm.serialize(),
+                    success: function (data) {
+                        console.log('Submission was successful.');
+                        console.log(data);
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    },
+                });
+
+
+
+        });
+        });
+    </script>
+@endsection

@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Department;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 
 class AdminController extends Controller
 {
@@ -33,7 +34,22 @@ class AdminController extends Controller
     public function create()
     {
 
-        return view('Admin.CreateUser');
+        $Roles=Role::all();
+        $departments=Department::all();
+        app()->setLocale('ar');
+        $InformationArray=Array(
+            "Roles"=>$Roles,
+            "departments"=>$departments
+        );
+        return view('Admin.CreateUser',$InformationArray);
+
+    }
+
+    public  function StoreUser(Request $request)
+    {
+
+
+        DD($request);
 
     }
 
