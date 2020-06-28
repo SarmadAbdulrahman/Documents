@@ -63,14 +63,31 @@ class ClientAgentController extends Controller
     {
 
 
+        $tickets=Ticket::where('user_id','=',auth()->user()->id)->get();
 
 
 
 
+        $informationArray=array(
+            'tickets'=>$tickets
+        );
+        return view('ClientAgent.showTicket',$informationArray);
 
-        return view('ClientAgent.showTicket');
 
 
+    }
+
+
+    public function GetDetails(Request $request)
+    {
+
+
+
+
+        $informationArray=array(
+
+        );
+        return view('ClientAgent.timeline',$informationArray);
 
     }
 }

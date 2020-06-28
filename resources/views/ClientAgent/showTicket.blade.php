@@ -82,34 +82,34 @@
                                     <th class="numeric">
                                         Ticket status
                                     </th>
+
                                     <th class="numeric">
-                                        Details
+                                        Ticket type
+                                    </th>
+                                    <th class="numeric">
+                                        Action
                                     </th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>
-                                        AAC
-                                    </td>
-                                    <td>
-                                        AUSTRALIAN AGRICULTURAL COMPANY LIMITED.
-                                    </td>
-                                    <td class="numeric">
-                                        $1.38
-                                    </td>
-                                    <td class="numeric">
-                                        -0.01
-                                    </td>
-                                    <td class="numeric">
-                                        -0.36%
-                                    </td>
 
 
-                                    <td>
-                                        Check Details
-                                    </td>
-                                </tr>
+
+                                    @foreach($tickets as $ticket)
+                                        <tr>
+                                        <td>TICKET0000000000000{{$ticket->id}}</td>
+                                        <td>{{$ticket->created_at}}</td>
+                                        <td>{{$ticket->issue_name}}</td>
+                                        <td>{{$ticket->agent_comment}}</td>
+                                        <td>{{$ticket->progress}}</td>
+                                        <td>{{App\TicketType::find($ticket->ticket_type_id)->ar_name}}</td>
+                                        <td><a href="{{url('ClientAgent/GetDetails?id=')}}{{$ticket->id}}" class=" btn btn-success">Get Details</a></td>
+                                        </tr>
+                                    @endforeach
+
+
+
+
                                 </tbody>
                             </table>
                         </div>
@@ -119,6 +119,5 @@
         </div>
     </div>
     <!-- /Page Body -->
-
 @endsection
 @extends('layouts.ThemeSource.footer')
