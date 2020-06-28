@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="widget-body">
                                     <div id="registration-form">
-                                        <form role="form" method="post" id="cc" action="{{url('ClientAgent/StoreUser')}}">
+                                        <form role="form" method="post" id="cc" action="{{url('ClientAgent/StoreTicket')}}">
                                             @csrf
                                             <div class="form-title">
                                                 Ticket Information
@@ -82,9 +82,6 @@
                                                     <textarea name="ticket" rows="15" cols="75"></textarea>
                                                 </span>
                                             </div>
-
-
-
 
 
 
@@ -126,11 +123,22 @@
                     data: frm.serialize(),
                     success: function (data) {
                         console.log('Submission was successful.');
+
+                        Swal.fire(
+                            'Good job!',
+                            'Ticket Has been created',
+                            'success'
+                        );
+
+
                         console.log(data);
                     },
                     error: function (data) {
-                        console.log('An error occurred.');
-                        console.log(data);
+                        Swal.fire(
+                            'fail',
+                            'please fill all field',
+                            'fail'
+                        );
                     },
                 });
 

@@ -136,6 +136,12 @@
                             </a>
                         </li>
 
+                        <li>
+                            <a href="{{url('ClientAgent/ShowTicket')}}">
+                                <span class="menu-text">Show Ticket</span>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
                 @endrole()

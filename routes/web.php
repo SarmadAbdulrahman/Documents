@@ -50,10 +50,11 @@ Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdmin
 
 
 Route::group(['prefix'=>'ClientAgent','middleware' => ['role:ClientAgent']], function () {
-    // CreateUser
+    // CreateUser  StoreUser
     Route::get('/','ClientAgent\ClientAgentController@index');
     Route::get('/CreateTicket','ClientAgent\ClientAgentController@CreateTicket');
-
+    Route::post('/StoreTicket','ClientAgent\ClientAgentController@StoreTicket');
+    Route::get('/ShowTicket','ClientAgent\ClientAgentController@ShowTicket');
 
 
 });
