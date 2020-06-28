@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc18d71-e8ad-4b79-9f8b-98ac2a22c497" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/ClientAgent/timeline.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientAgent/ClientAgentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientAgent/ClientAgentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ClientAgent/showTicket.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ClientAgent/showTicket.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ClientAgent/timeline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ClientAgent/timeline.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +132,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -165,7 +164,7 @@
       <workItem from="1591852941455" duration="13159000" />
       <workItem from="1591874751766" duration="521000" />
       <workItem from="1592976566713" duration="9911000" />
-      <workItem from="1593320192010" duration="5890000" />
+      <workItem from="1593320192010" duration="8026000" />
     </task>
     <servers />
   </component>

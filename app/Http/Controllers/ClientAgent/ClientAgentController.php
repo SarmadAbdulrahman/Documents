@@ -4,6 +4,7 @@ namespace App\Http\Controllers\ClientAgent;
 
 use App\Http\Controllers\Controller;
 use App\Ticket;
+use App\TicketDetail;
 use App\TicketType;
 use Illuminate\Http\Request;
 use Validator;
@@ -82,10 +83,11 @@ class ClientAgentController extends Controller
     {
 
 
+        $TicketDetails=TicketDetail::where('ticket_id','=',$request->id)->get();
 
 
         $informationArray=array(
-
+            'TicketDetails'=>$TicketDetails
         );
         return view('ClientAgent.timeline',$informationArray);
 
