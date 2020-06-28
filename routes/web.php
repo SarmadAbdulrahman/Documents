@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/arabic','Helper\HelperController@arabic');
+Route::get('/english','Helper\HelperController@english');
+
 Auth::routes(['register'=>false]);
 
 Route::get('/home', 'HomeController@index')->name('home');

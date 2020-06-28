@@ -2,6 +2,7 @@
 
 return [
     'registration' => 'لوحه التسجيل',
-     'Save' => 'save'
+     'Save' => 'خزن',
+    'Create_Users'=>'انشاء المستخدم'
 ];
 ?>

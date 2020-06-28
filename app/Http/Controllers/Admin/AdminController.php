@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Spatie\Permission\Models\Role;
 use Validator;
 
@@ -39,7 +40,8 @@ class AdminController extends Controller
 
         $Roles=Role::all();
         $departments=Department::all();
-        app()->setLocale('ar');
+      //  app()->setLocale('ar');
+        app()->setLocale(Session::get('locale'));
         $InformationArray=Array(
             "Roles"=>$Roles,
             "departments"=>$departments

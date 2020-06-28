@@ -46,7 +46,7 @@
         <!-- /Page Header -->
         <!-- Page Body -->
         <div class="page-body">
-            <h5 class="row-title"><i class="typcn typcn-th-small"></i>Create Users</h5>
+            <h5 class="row-title"><i class="typcn typcn-th-small"></i>{{ trans('messages.registration') }}</h5>
             <div class="row">
 
 
@@ -55,7 +55,7 @@
                         <div class="col-lg-6 col-sm-6 col-xs-12">
                             <div class="widget flat radius-bordered">
                                 <div class="widget-header bg-blue">
-                                    <span class="widget-caption">{{ trans('messages.registration') }} </span>
+                                    <span class="widget-caption">{{ trans('messages.Create_Users') }} </span>
                                 </div>
                                 <div class="widget-body">
                                     <div id="registration-form">
@@ -107,7 +107,7 @@
 
 
                                             <hr class="wide"/>
-                                            <button  type="submit"  class="btn btn-blue">Register</button>
+                                            <button  type="submit"  class="btn btn-blue">{{ trans('messages.Save') }}</button>
                                             </form>
                                     </div>
 

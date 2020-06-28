@@ -12,10 +12,12 @@ use Validator;
 
 class ClientAgentController extends Controller
 {
-    //
+    // this is for get details
 
     public function Index()
     {
+
+
 
         return view('ClientAgent.index');
     }
@@ -116,10 +118,6 @@ class ClientAgentController extends Controller
 
 
         return redirect()->back();
-
-
-
-
 
     }
 }

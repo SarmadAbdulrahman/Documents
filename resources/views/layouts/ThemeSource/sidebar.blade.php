@@ -147,7 +147,29 @@
                 @endrole()
 
 
+                <li>
+                    <a href="#" class="menu-dropdown">
+                        <i class="menu-icon fa fa-language"></i>
+                        <span class="menu-text">language</span>
+                        <i class="menu-expand"></i>
+                    </a>
 
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="{{url('arabic')}}">
+                                <span class="menu-text">Arabic</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{url('english')}}">
+                                <span class="menu-text">English</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
 
 
 
