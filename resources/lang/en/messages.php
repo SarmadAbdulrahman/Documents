@@ -2,10 +2,12 @@
 return [
     'registration' => 'registration form',
     'Save' => 'save',
-    'ticket_form'=>'ticket creation form',
+    'ticket_form'=>'Ticket creation form',
     'Create_Users'=>'Create Users',
-    'Create_ticket'=>'Create ticket',
-  'ticket_information'=>'ticket information'
+    'Create_ticket'=>'Create Ticket',
+   'ticket_information'=>'ticket information',
+    'success'=>'success',
+    'ticket_created'=>'ticket has been created'
 
 ];
 ?>

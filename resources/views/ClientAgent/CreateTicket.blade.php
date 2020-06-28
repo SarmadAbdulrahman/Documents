@@ -125,8 +125,8 @@
                         console.log('Submission was successful.');
 
                         Swal.fire(
-                            'Good job!',
-                            'Ticket Has been created',
+                            '{{ trans('messages.success') }}',
+                            '{{ trans('messages.ticket_created') }}',
                             'success'
                         );
 
