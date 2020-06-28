@@ -46,7 +46,7 @@
         <!-- /Page Header -->
         <!-- Page Body -->
         <div class="page-body">
-            <h5 class="row-title"><i class="typcn typcn-th-small"></i>Create Ticket</h5>
+            <h5 class="row-title"><i class="typcn typcn-th-small"></i>{{trans('messages.Create_ticket')}}</h5>
             <div class="row">
 
 
@@ -62,7 +62,7 @@
                                         <form role="form" method="post" id="cc" action="{{url('ClientAgent/StoreTicket')}}">
                                             @csrf
                                             <div class="form-title">
-                                                Ticket Information
+                                                {{ trans('messages.ticket_information') }}
                                             </div>
 
 

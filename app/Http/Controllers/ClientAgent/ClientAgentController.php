@@ -7,6 +7,7 @@ use App\Ticket;
 use App\TicketDetail;
 use App\TicketType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Validator;
 
 
@@ -18,7 +19,7 @@ class ClientAgentController extends Controller
     {
 
 
-
+     //   app()->setLocale(Session::get('locale'));
         return view('ClientAgent.index');
     }
 
@@ -26,7 +27,7 @@ class ClientAgentController extends Controller
     public function CreateTicket()
     {
 
-
+        app()->setLocale(Session::get('locale'));
         $TicketTypes=TicketType::all();
 
 
