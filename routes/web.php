@@ -18,6 +18,8 @@ Route::get('/', function () {
 });
 
 
+// https://dotnet.microsoft.com/apps/aspnet/mvc
+
 Route::get('/arabic','Helper\HelperController@arabic');
 Route::get('/english','Helper\HelperController@english');
 
