@@ -83,13 +83,43 @@ class ClientAgentController extends Controller
     {
 
 
-        $TicketDetails=TicketDetail::where('ticket_id','=',$request->id)->get();
+        $TicketDetails=TicketDetail::where('ticket_id','=',$request->id)->orderBy('created_at', 'desc')->get();
 
 
         $informationArray=array(
-            'TicketDetails'=>$TicketDetails
+            'TicketDetails'=>$TicketDetails,
+            'id'=>$request->id
         );
         return view('ClientAgent.timeline',$informationArray);
+
+    }
+
+    public function StoreReply(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'reply' => 'required',
+            'id' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+
+            return redirect()->back();
+        }
+
+
+        TicketDetail::create([
+             'customer_comment'=>$request["reply"]
+            , 'ticket_id'=>$request["id"]
+        ]);
+
+
+
+        return redirect()->back();
+
+
+
+
 
     }
 }

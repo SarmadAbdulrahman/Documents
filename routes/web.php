@@ -56,6 +56,7 @@ Route::group(['prefix'=>'ClientAgent','middleware' => ['role:ClientAgent']], fun
     Route::post('/StoreTicket','ClientAgent\ClientAgentController@StoreTicket');
     Route::get('/ShowTicket','ClientAgent\ClientAgentController@ShowTicket');
     Route::get('/GetDetails','ClientAgent\ClientAgentController@GetDetails');
+    Route::post('/StoreReply','ClientAgent\ClientAgentController@StoreReply');
 
 
 });

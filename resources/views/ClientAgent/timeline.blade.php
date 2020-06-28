@@ -50,8 +50,9 @@
                                 <span class="widget-caption">Inline ticket</span>
                             </div>
                             <div class="widget-body bordered-left bordered-warning">
-                                <form class="form-inline" role="form">
-
+                                <form class="form-inline"  role="form" method="post" action="{{url('ClientAgent/StoreReply')}}">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$id}}">
                                     <div class="form-group ">
                                         <label class="sr-only" for="exampleInputEmail2">Comment</label>
                                         <textarea name="reply" id="" cols="150" rows="2"></textarea>
@@ -75,17 +76,15 @@
 
 
                     <li class="timeline-node">
-                        <a class="btn btn-yellow">YESTERDAY</a>
+                        <a class="btn btn-yellow">{{Carbon\Carbon::parse($TicketDetail->created_at)->format('d-m-Y i')}}</a>
                     </li>
-
-
 
                     @if($TicketDetail->agent_comment!=null)
                     <li>
                         <div class="timeline-datetime">
                                 <span class="timeline-time">
-                                    7:00
-                                </span><span class="timeline-date">Yesterday</span>
+
+                                </span><span class="timeline-date">{{Carbon\Carbon::parse($TicketDetail->created_at)->format('d-m-Y i')}}</span>
                         </div>
                         <div class="timeline-badge danger">
                             <i class="fa fa-exclamation font-120"></i>
@@ -124,11 +123,11 @@
                         <li class="timeline-inverted">
                             <div class="timeline-datetime">
                                 <span class="timeline-time">
-                                    3:09
-                                </span><span class="timeline-date">Yesterday</span>
+
+                                </span><span class="timeline-date">{{Carbon\Carbon::parse($TicketDetail->created_at)->format('d-m-Y i')}}</span>
                             </div>
-                            <div class="timeline-badge">
-                                <i class="fa fa-picture-o darkpink"></i>
+                            <div class="timeline-badge danger">
+                                <i class="fa fa-exclamation font-120"></i>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-header bordered-bottom bordered-blue">
@@ -143,7 +142,8 @@
                                     </p>
                                 </div>
                                 <div class="timeline-body">
-                                    <a href="#">John Travolta</a> shared an image on <a href="#">Dribble</a>
+                                    <a href="#">Client</a> Reply
+
                                     <div class="tl-wide text-center" style="padding: 5px; margin-top:10px; margin-bottom: 10px;">
                                         <img src="assets/img/temp1.png" alt="" style="max-height: 158px;max-width: 100%;">
                                     </div>
@@ -153,23 +153,15 @@
                         </li>
 
 
-
-
-
-
-
                     <li class="timeline-node">
-                        <a class="btn btn-info">11 DECEMBER</a>
+                        <a class="btn btn-info">{{Carbon\Carbon::parse($TicketDetail->created_at)->format('d-m-Y i')}}</a>
                     </li>
-@endforeach
+            @endforeach
 
                 </ul>
             </div>
             <!-- /Page Body -->
         </div>
     </div>
-
-
-
 @endsection
 @extends('layouts.ThemeSource.footer')
