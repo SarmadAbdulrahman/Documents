@@ -55,60 +55,43 @@
                         <div class="col-lg-6 col-sm-6 col-xs-12">
                             <div class="widget flat radius-bordered">
                                 <div class="widget-header bg-blue">
-                                    <span class="widget-caption">{{ trans('messages.registration') }} </span>
+                                    <span class="widget-caption">{{ trans('messages.ticket_form') }} </span>
                                 </div>
                                 <div class="widget-body">
                                     <div id="registration-form">
-                                        <form role="form" method="post" id="cc" action="{{url('SystemAdministrator/StoreUser')}}">
+                                        <form role="form" method="post" id="cc" action="{{url('ClientAgent/StoreUser')}}">
                                             @csrf
                                             <div class="form-title">
-                                                User Information
+                                                Ticket Information
                                             </div>
 
 
-
                                             <div class="form-group">
-                                                <span class="input-icon icon-right">
-                                                    <input type="text" class="form-control" name="userameInput" id="userameInput" placeholder="Username">
-                                                    <i class="glyphicon glyphicon-user circular"></i>
-                                                </span>
-                                            </div>
-
-
-
-
-                                            <div class="form-group">
-                                                <span class="input-icon icon-right">
-                                                    <input type="text" class="form-control"  name="emailInput" id="emailInput" placeholder="Email Address">
-                                                    <i class="fa fa-envelope-o circular"></i>
-                                                </span>
-                                            </div>
-
-
-
-
-
-                                            <div class="form-group">
-                                                <span class="input-icon icon-right">
-                                                    <input type="text" class="form-control"  name="passwordInput" id="passwordInput" placeholder="Password">
-                                                    <i class="fa fa-lock circular"></i>
-                                                </span>
-                                            </div>
-
-
-
-                                            <div class="form-group">
-                                                <select class="form-control Roles" name="Role">
-
+                                                <select class="form-control Roles" name="ticket_type">
+                                                    @foreach($TicketTypes as $TicketType)
+                                                        <option value="{{$TicketType->id}}">{{$TicketType->ar_name}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
+
+
+
+
+                                            <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <textarea name="ticket" rows="15" cols="75"></textarea>
+                                                </span>
+                                            </div>
+
+
+
+
 
 
                                             <hr class="wide"/>
                                             <button  type="submit"  class="btn btn-blue">{{ trans('messages.Save') }}</button>
                                         </form>
                                     </div>
-
 
                                 </div>
                             </div>
