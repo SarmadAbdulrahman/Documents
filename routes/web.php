@@ -75,8 +75,6 @@ Route::group(['prefix'=>'TaskManager','middleware' => ['role:TaskManager']], fun
     // CreateUser
     Route::get('/','TaskManager\TaskManagerController@index');
 
-
-
 });
 
 

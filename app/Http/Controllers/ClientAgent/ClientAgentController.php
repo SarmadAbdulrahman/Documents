@@ -15,6 +15,18 @@ class ClientAgentController extends Controller
 {
     // this is for get details
 
+
+    public function __construct()
+    {
+
+        app()->setLocale(Session::get('locale'));
+        $this->middleware('auth');
+    }
+
+
+
+
+
     public function Index()
     {
 

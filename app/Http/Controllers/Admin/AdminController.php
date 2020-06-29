@@ -20,6 +20,8 @@ class AdminController extends Controller
      */
     public function __construct()
     {
+
+        app()->setLocale(Session::get('locale'));
         $this->middleware('auth');
     }
 
