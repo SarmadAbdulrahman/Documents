@@ -92,9 +92,6 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-
-
-
                                     @foreach($tickets as $ticket)
                                         <tr>
                                         <td>TICKET0000000000000{{$ticket->id}}</td>
@@ -106,10 +103,6 @@
                                         <td><a href="{{url('ClientAgent/GetDetails?id=')}}{{$ticket->id}}" class=" btn btn-success"> {{ trans('messages.GetDetails') }}</a></td>
                                         </tr>
                                     @endforeach
-
-
-
-
                                 </tbody>
                             </table>
                         </div>
