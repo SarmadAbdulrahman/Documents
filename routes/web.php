@@ -64,7 +64,6 @@ Route::group(['prefix'=>'ClientAgent','middleware' => ['role:ClientAgent']], fun
     Route::get('/GetDetails','ClientAgent\ClientAgentController@GetDetails');
     Route::post('/StoreReply','ClientAgent\ClientAgentController@StoreReply');
 
-
 });
 
 

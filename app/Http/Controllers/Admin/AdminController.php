@@ -56,7 +56,7 @@ class AdminController extends Controller
 
 
         $validator = Validator::make($request->all(), [
-            'emailInput' => 'required|email|unique:users',
+            'emailInput' => 'required|email|unique:users,email',
             'userameInput' => 'required|string|max:50',
             'passwordInput' => 'required'
         ]);

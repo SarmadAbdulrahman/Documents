@@ -67,6 +67,9 @@ class ClientAgentController extends Controller
     {
 
 
+
+        app()->setLocale(Session::get('locale'));
+
         $tickets=Ticket::where('user_id','=',auth()->user()->id)->get();
 
 

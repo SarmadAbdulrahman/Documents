@@ -68,26 +68,26 @@
                                 <thead class="flip-content bordered-palegreen">
                                 <tr>
                                     <th>
-                                        Ticket Code
+                                        {{ trans('messages.Ticket Code') }}
                                     </th>
                                     <th>
-                                        Ticket Date
+                                        {{ trans('messages.Ticket Date') }}
                                     </th>
                                     <th class="numeric">
-                                        Ticket issue
+                                        {{ trans('messages.Ticket issue') }}
                                     </th>
                                     <th class="numeric">
-                                        Ticket comment
+                                        {{ trans('messages.Ticket comment') }}
                                     </th>
                                     <th class="numeric">
-                                        Ticket status
+                                        {{ trans('messages.Ticket status') }}
                                     </th>
 
                                     <th class="numeric">
-                                        Ticket type
+                                        {{ trans('messages.Ticket type') }}
                                     </th>
                                     <th class="numeric">
-                                        Action
+                                        {{ trans('messages.Action') }}
                                     </th>
                                 </tr>
                                 </thead>
@@ -103,7 +103,7 @@
                                         <td>{{$ticket->agent_comment}}</td>
                                         <td>{{$ticket->progress}}</td>
                                         <td>{{App\TicketType::find($ticket->ticket_type_id)->ar_name}}</td>
-                                        <td><a href="{{url('ClientAgent/GetDetails?id=')}}{{$ticket->id}}" class=" btn btn-success">Get Details</a></td>
+                                        <td><a href="{{url('ClientAgent/GetDetails?id=')}}{{$ticket->id}}" class=" btn btn-success"> {{ trans('messages.GetDetails') }}</a></td>
                                         </tr>
                                     @endforeach
 
