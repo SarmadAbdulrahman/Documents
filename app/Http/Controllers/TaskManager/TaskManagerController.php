@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\TaskManager;
 
+use App\Department;
 use App\Http\Controllers\Controller;
+use App\Ticket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -14,12 +16,21 @@ class TaskManagerController extends Controller
     {
 
         app()->setLocale(Session::get('locale'));
+
         $this->middleware('auth');
     }
 
 
     public function  index(){
+        app()->setLocale(Session::get('locale'));
+        $Tikcets=Ticket::all();
+        $Departments=Department::all();
 
-        return view('TaskManager.index');
+        $informationArray=Array(
+          "tickets"=>$Tikcets,
+          "Departments"=>$Departments
+        );
+
+        return view('TaskManager.index',$informationArray);
     }
 }

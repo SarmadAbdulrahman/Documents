@@ -16,7 +16,8 @@ return [
      'Ticket status'=>'حاله التذكره',
      'Ticket type'=>'نوع التذكره',
      'Action'=>'اتخذ اجراء',
-     'GetDetails'=>'التفاصيل'
+     'GetDetails'=>'التفاصيل',
+     'Assigning'=>'تعيين القسم المعني'
 
 ];
 ?>

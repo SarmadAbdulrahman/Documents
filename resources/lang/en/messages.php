@@ -15,7 +15,8 @@ return [
     'Ticket status'=>'ticket status',
     'Ticket type'=>'ticket type',
     'Action'=>'action',
-    'GetDetails'=>'GetDetails'
+    'GetDetails'=>'GetDetails',
+    'Assigning'=>'Assigning Department'
 
 ];
 ?>
