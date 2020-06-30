@@ -7,7 +7,7 @@ IW this is project for  Ticket System
 <!-- Head -->
 <head>
     <meta charset="utf-8" />
-    <title>Ticket System|| Task Manager</title>
+    <title>Ticket System | Task Manager</title>
 
     <meta name="description" content="Dashboard" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc18d71-e8ad-4b79-9f8b-98ac2a22c497" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/TaskManager/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ClientAgent/showTicket.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ClientAgent/showTicket.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/ThemeSource/Header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/ThemeSource/Header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +170,8 @@
       <workItem from="1593338475910" duration="3917000" />
       <workItem from="1593345507111" duration="39000" />
       <workItem from="1593406151638" duration="733000" />
-      <workItem from="1593412281401" duration="2761000" />
+      <workItem from="1593412281401" duration="4936000" />
+      <workItem from="1593494470202" duration="278000" />
     </task>
     <servers />
   </component>
@@ -185,10 +183,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="416" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1591862376043" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593341802903">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593416308282">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1593341802903" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1593416308282" />
     <state x="538" y="380" key="NewPhpFileDialog" timestamp="1592985791724">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -197,10 +195,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="653" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1593320886239" />
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1593412282414">
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1593494470821">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1593412282414" />
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1593494470821" />
     <state x="422" y="298" key="com.intellij.ide.util.TipDialog/35.23.1405.877@35.23.1405.877" timestamp="1593406157910" />
     <state x="450" y="369" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1592981217336">
       <screen x="0" y="0" width="1440" height="900" />
