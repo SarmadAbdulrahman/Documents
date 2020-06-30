@@ -33,4 +33,22 @@ class TaskManagerController extends Controller
 
         return view('TaskManager.index',$informationArray);
     }
+
+
+    public function AssingDepartment(Request $request)
+
+    {
+
+        $Ticket=Ticket::find($request->id);
+
+         $Ticket->department_id=$request->Department;
+        $Ticket->save();
+
+        return redirect()->back();
+
+
+
+
+
+    }
 }

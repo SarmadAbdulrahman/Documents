@@ -14,6 +14,7 @@ return [
     'Ticket comment'=>'ticket comment',
     'Ticket status'=>'ticket status',
     'Ticket type'=>'ticket type',
+    'Department'=>'Department',
     'Action'=>'action',
     'GetDetails'=>'GetDetails',
     'Assigning'=>'Assigning Department'

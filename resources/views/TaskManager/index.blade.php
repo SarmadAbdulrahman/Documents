@@ -87,6 +87,9 @@
                                         {{ trans('messages.Ticket type') }}
                                     </th>
                                     <th class="numeric">
+                                        {{ trans('messages.Department') }}
+                                    </th>
+                                    <th class="numeric">
                                         {{ trans('messages.Action') }}
                                     </th>
                                 </tr>
@@ -100,6 +103,11 @@
                                         <td>{{$ticket->agent_comment}}</td>
                                         <td>{{$ticket->progress}}</td>
                                         <td>{{App\TicketType::find($ticket->ticket_type_id)->ar_name}}</td>
+                                        @if($ticket->department_id!=0)
+                                        <td>{{App\Department::find($ticket->department_id)->name}}</td>
+                                            @else
+                                            <td>no</td>
+                                        @endif
                                         <td><a  id="{{$ticket->id}}" class=" btn btn-success cc"> {{ trans('messages.Assigning') }}</a></td>
                                     </tr>
                                 @endforeach
@@ -117,7 +125,8 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <form class="form-inline">
+                                        <form class="form-inline" method="post" action="{{url('TaskManager/AssingDepartment')}}">
+                                            @csrf
                                         <div class="modal-body">
 
                                             <div class="form-group">
@@ -126,6 +135,7 @@
                                                         <option value="{{$Department->id}}">{{$Department->name}}</option>
                                                     @endforeach
                                                 </select>
+                                                <input type="hidden" class="id" name="id" >
                                             </div>
 
                                         </div>
@@ -162,6 +172,7 @@
 
                 var TicketID=$(this).attr('id');
 
+                $('.id').val(TicketID);
                 $('#exampleModal').modal('show');
 
 

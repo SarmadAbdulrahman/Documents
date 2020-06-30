@@ -74,6 +74,7 @@ Route::group(['prefix'=>'ClientAgent','middleware' => ['role:ClientAgent']], fun
 Route::group(['prefix'=>'TaskManager','middleware' => ['role:TaskManager']], function () {
     // CreateUser
     Route::get('/','TaskManager\TaskManagerController@index');
+    Route::post('/AssingDepartment','TaskManager\TaskManagerController@AssingDepartment');
 
 });
 
