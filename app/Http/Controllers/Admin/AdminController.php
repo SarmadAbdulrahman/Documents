@@ -89,6 +89,56 @@ class AdminController extends Controller
     }
 
 
+    public function ChangeUserRole(){
+
+
+        app()->setLocale(Session::get('locale'));
+
+
+        $users=User::all();
+        $Roles=Role::all();
+
+
+        $informationArray=Array(
+            'users'=>$users,
+            'Roles'=>$Roles
+        );
+
+
+
+        return view('Admin.ChangeUserRole',$informationArray);
+    }
+
+
+
+    public function StoreUserRole(Request $request)
+    {
+
+
+
+        $user=User::find($request->id);
+        $user->syncRoles(Role::find($request["Role"]));
+
+        return redirect()->back();
+
+
+    }
+
+
+    public function StoreUserPassword(Request $request)
+    {
+
+
+        $user=User::find($request->id);
+        $user->password=Hash::make($request['password']);
+        $user->save();
+        return redirect()->back();
+
+
+    }
+
+
+
 
 
 

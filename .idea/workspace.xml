@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc18d71-e8ad-4b79-9f8b-98ac2a22c497" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/Admin/ChangeUserRole.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskManager/TaskManagerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskManager/TaskManagerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Ticket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/TaskManager/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/TaskManager/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/ThemeSource/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/ThemeSource/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +176,8 @@
       <workItem from="1593345507111" duration="39000" />
       <workItem from="1593406151638" duration="733000" />
       <workItem from="1593412281401" duration="4936000" />
-      <workItem from="1593494470202" duration="6262000" />
+      <workItem from="1593494470202" duration="6640000" />
+      <workItem from="1593926179633" duration="5462000" />
     </task>
     <servers />
   </component>
@@ -200,10 +201,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="653" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1593320886239" />
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1593494470821">
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1593926180188">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1593494470821" />
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1593926180188" />
     <state x="422" y="298" key="com.intellij.ide.util.TipDialog/35.23.1405.877@35.23.1405.877" timestamp="1593406157910" />
     <state x="450" y="369" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1592981217336">
       <screen x="0" y="0" width="1440" height="900" />

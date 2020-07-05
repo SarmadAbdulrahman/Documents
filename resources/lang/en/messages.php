@@ -17,7 +17,15 @@ return [
     'Department'=>'Department',
     'Action'=>'action',
     'GetDetails'=>'GetDetails',
-    'Assigning'=>'Assigning Department'
+    'ChangeRoleAction'=>'Change user Role ',
+    'Assigning'=>'Assigning Department',
+    'UserName'=>'User Name',
+    'UserEmail'=>'User Email',
+    'UserRole'=>'User Role',
+    'ChangeRole'=>'Change User Role',
+    'UserOption'=>'User Option',
+    'ChangeUserPassword'=>'Change User Password',
+    'GetUserDetails'=>' View User',
 
 ];
 ?>

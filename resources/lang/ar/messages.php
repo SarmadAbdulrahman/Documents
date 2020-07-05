@@ -1,6 +1,8 @@
 <?php
 
 return [
+
+
      'registration' => 'لوحه التسجيل',
      'Save' => 'خزن',
      'Create_Users'=>'انشاء المستخدم',
@@ -17,8 +19,16 @@ return [
      'Ticket type'=>'نوع التذكره',
      'Action'=>'اتخذ اجراء',
      'GetDetails'=>'التفاصيل',
+    'GetUserDetails'=>'معاينه',
      'Assigning'=>'تعيين القسم المعني',
      'Department'=>'القسم المعني',
+     'UserName'=>'اسم المستخدم',
+     'UserEmail'=>'البريد الالكتروني',
+     'UserRole'=>'دور المستخدم',
+     'ChangeRole'=>'تغيير صلاحيات المستخدم',
+    'UserOption'=>'تعديلات المتسخدم',
+    'ChangeRoleAction'=>'تغيير صلاحيه المتسخدم ',
+    'ChangeUserPassword'=>'اعاده تعيين كلمه المرور'
 
 ];
 ?>

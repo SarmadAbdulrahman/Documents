@@ -105,7 +105,7 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="{{url('SystemAdministrator/changeUserRole')}}">
                                 <span class="menu-text">Change User Role</span>
                             </a>
                         </li>

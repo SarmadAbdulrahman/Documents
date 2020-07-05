@@ -44,11 +44,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdministrator']], function () {
-    // CreateUser
+    // CreateUser changeUserRole  StoreUserRole  StoreUserPassword
         Route::get('/','Admin\AdminController@index');
         Route::get('/CreateUser','Admin\AdminController@create');
         Route::post('/StoreUser','Admin\AdminController@StoreUser');
-
+        Route::get('/changeUserRole','Admin\AdminController@changeUserRole');
+        Route::post('/StoreUserRole','Admin\AdminController@StoreUserRole');
+        Route::post('/StoreUserPassword','Admin\AdminController@StoreUserPassword');
 
 });
 
