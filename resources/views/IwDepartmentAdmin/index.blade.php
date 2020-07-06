@@ -7,12 +7,12 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="fa fa-home"></i>
-                    <a href="#">IwDepartmentAdmin</a>
+                    <a href="#">Client Agent</a>
                 </li>
                 <li>
-                    <a href="#">Task</a>
+                    <a href="#">Show Ticket</a>
                 </li>
-                <li class="active">Tasks and ticket</li>
+                <li class="active">Show Ticket</li>
             </ul>
         </div>
         <!-- /Page Breadcrumb -->
@@ -20,10 +20,10 @@
         <div class="page-header position-relative">
             <div class="header-title">
                 <h1>
-                    Iw DepartmentAdmin
+                    Client Agent
                     <small>
                         <i class="fa fa-angle-right"></i>
-                        Tasks
+                        Tickets
                     </small>
                 </h1>
             </div>
@@ -43,32 +43,74 @@
         </div>
         <!-- /Page Header -->
         <!-- Page Body -->
-        <div class="page-body">
-            <h5 class="row-title"><i class="typcn typcn-th-small"></i>Task Option</h5>
 
-
-            <div class="row">
-                <div class="col-xs-12 col-md-12">
-                    <div class="widget">
-                        <div class="widget-header  with-footer">
-                            <span class="widget-caption">Task</span>
-                            <div class="widget-buttons">
-                                <a href="#" data-toggle="maximize">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="#" data-toggle="collapse">
-                                    <i class="fa fa-minus"></i>
-                                </a>
-                                <a href="#" data-toggle="dispose">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                            </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="widget">
+                    <div class="widget-header  with-footer">
+                        <span class="widget-caption">Tickets Progress</span>
+                        <div class="widget-buttons">
+                            <a href="#" data-toggle="maximize">
+                                <i class="fa fa-expand"></i>
+                            </a>
+                            <a href="#" data-toggle="collapse">
+                                <i class="fa fa-minus"></i>
+                            </a>
+                            <a href="#" data-toggle="dispose">
+                                <i class="fa fa-times"></i>
+                            </a>
                         </div>
+                    </div>
+                    <div class="widget-body">
 
+                        <div class="flip-scroll">
+                            <table class="table table-bordered table-striped table-condensed flip-content">
+                                <thead class="flip-content bordered-palegreen">
+                                <tr>
+                                    <th>
+                                        {{ trans('messages.Ticket Code') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('messages.Ticket Date') }}
+                                    </th>
+                                    <th class="numeric">
+                                        {{ trans('messages.Ticket issue') }}
+                                    </th>
+                                    <th class="numeric">
+                                        {{ trans('messages.Ticket comment') }}
+                                    </th>
+                                    <th class="numeric">
+                                        {{ trans('messages.Ticket status') }}
+                                    </th>
+
+                                    <th class="numeric">
+                                        {{ trans('messages.Ticket type') }}
+                                    </th>
+                                    <th class="numeric">
+                                        {{ trans('messages.Action') }}
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($tickets as $ticket)
+                                    <tr>
+                                        <td>TICKET0000000000000{{$ticket->id}}</td>
+                                        <td>{{$ticket->created_at}}</td>
+                                        <td>{{$ticket->issue_name}}</td>
+                                        <td>{{$ticket->agent_comment}}</td>
+                                        <td>{{$ticket->progress}}</td>
+                                        <td>{{App\TicketType::find($ticket->ticket_type_id)->ar_name}}</td>
+                                        <td><a href="{{url('IwDepartmentAdmin/GetDetails?id=')}}{{$ticket->id}}" class=" btn btn-success"> {{ trans('messages.GetDetails') }}</a></td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- /Page Body -->
 @endsection
 @extends('layouts.ThemeSource.footer')

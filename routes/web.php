@@ -87,8 +87,10 @@ Route::group(['prefix'=>'TaskManager','middleware' => ['role:TaskManager']], fun
 
 
 Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentAdmin']], function () {
-    // CreateUser
+    // CreateUser  GetDetails  IwDepartmentAdmin
     Route::get('/','IwDepartmentAdmin\IwDepartmentAdminController@index');
+    Route::get('/GetDetails','IwDepartmentAdmin\IwDepartmentAdminController@GetDetails');
+    Route::post('/IwDepartmentAdmin','IwDepartmentAdmin\IwDepartmentAdminController@IwDepartmentAdmin');
 
 
 });

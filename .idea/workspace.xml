@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc18d71-e8ad-4b79-9f8b-98ac2a22c497" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/IwDepartmentAdmin/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/IwDepartmentAdmin/timeline.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/AssignDepartmentAdmin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AssignDepartmentAdmin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IwDepartmentAdmin/IwDepartmentAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IwDepartmentAdmin/IwDepartmentAdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/IwDepartmentAdmin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/IwDepartmentAdmin/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +176,7 @@
       <workItem from="1593412281401" duration="4936000" />
       <workItem from="1593494470202" duration="6640000" />
       <workItem from="1593926179633" duration="7056000" />
-      <workItem from="1594011720188" duration="2343000" />
+      <workItem from="1594011720188" duration="3414000" />
     </task>
     <servers />
   </component>
@@ -191,10 +188,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="416" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1591862376043" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593416308282">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594021001158">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1593416308282" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1594021001158" />
     <state x="538" y="380" key="NewPhpFileDialog" timestamp="1592985791724">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
