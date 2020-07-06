@@ -100,11 +100,53 @@
                                         <td>{{$ticket->agent_comment}}</td>
                                         <td>{{$ticket->progress}}</td>
                                         <td>{{App\TicketType::find($ticket->ticket_type_id)->ar_name}}</td>
-                                        <td><a href="{{url('IwDepartmentAdmin/GetDetails?id=')}}{{$ticket->id}}" class=" btn btn-success"> {{ trans('messages.GetDetails') }}</a></td>
+                                        <td>
+                                            <a href="{{url('IwDepartmentAdmin/GetDetails?id=')}}{{$ticket->id}}" class=" btn btn-success"> {{ trans('messages.GetDetails') }}</a>
+                                            <a id="{{$ticket->id}}" class=" btn btn-danger AssignEmp"> {{ trans('messages.AssignAgent') }}</a>
+
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Chose Department</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <form class="form-inline" method="post" action="{{url('IwDepartmentAdmin/AssingTaskToUser')}}">
+                                            @csrf
+                                            <div class="modal-body">
+
+                                                <div class="form-group">
+                                                    <select class="form-control  input-lg Roles" name="username">
+                                                        @foreach($Users as $User)
+                                                            <option value="{{$User->id}}">{{$User->name}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                    <input type="hidden" class="id" name="id" >
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+
+
                         </div>
                     </div>
                 </div>
@@ -114,3 +156,25 @@
     <!-- /Page Body -->
 @endsection
 @extends('layouts.ThemeSource.footer')
+@section('js')
+    <script>
+        $(document).ready(function () {
+            // this is for get a way  department
+            $('.Roles').select2({
+                placeholder: 'Select user'
+            });
+
+            $('body').on('click','.AssignEmp',function () {
+
+
+                var TicketID=$(this).attr('id');
+
+                $('.id').val(TicketID);
+                $('#exampleModal').modal('show');
+
+
+            });
+
+        });
+    </script>
+@endsection

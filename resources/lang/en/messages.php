@@ -27,6 +27,7 @@ return [
     'ChangeUserPassword'=>'Change User Password',
     'GetUserDetails'=>' View User',
     'ChangeUserDepartment'=>' Change User Department',
+    'AssignAgent'=>'Assing Employee',
 
 ];
 ?>

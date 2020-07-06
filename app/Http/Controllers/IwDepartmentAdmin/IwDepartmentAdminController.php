@@ -6,6 +6,7 @@ use App\Department;
 use App\Http\Controllers\Controller;
 use App\Ticket;
 use App\TicketDetail;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -22,9 +23,11 @@ class IwDepartmentAdminController extends Controller
         $userId=auth()->user()->id;
         $DepartmentId=Department::where('user_id',"=",$userId)->get()[0]["id"];
         $tickets=Ticket::where('department_id',"=",$DepartmentId)->get();
+        $Users=User::all();
 
         $InformationArray=Array(
-            'tickets'=>$tickets
+            'tickets'=>$tickets,
+            'Users'=>$Users
         );
 
         return view('IwDepartmentAdmin.index',$InformationArray);
@@ -71,6 +74,32 @@ class IwDepartmentAdminController extends Controller
 
 
         return redirect()->back();
+
+
+    }
+
+    public function AssingTaskToUser(Request $request)
+
+    {
+
+
+        $validator = Validator::make($request->all(), [
+            'username' => 'required',
+            'id' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+
+            return redirect()->back();
+        }
+
+
+        $ticket=Ticket::find($request->id);
+        $ticket->agent_id=$request->username;
+        $ticket->save();
+
+        return redirect()->back();
+
 
 
     }

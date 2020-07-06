@@ -19,6 +19,7 @@ return [
      'Ticket type'=>'نوع التذكره',
      'Action'=>'اتخذ اجراء',
      'GetDetails'=>'التفاصيل',
+    'AssignAgent'=>'تعيين الموظف',
     'GetUserDetails'=>'معاينه',
      'Assigning'=>'تعيين القسم المعني',
      'Department'=>'القسم المعني',
