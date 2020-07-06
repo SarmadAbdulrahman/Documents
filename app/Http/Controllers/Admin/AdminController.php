@@ -138,6 +138,24 @@ class AdminController extends Controller
     }
 
 
+    public  function AssignDepartmentAdmin(Request $request)
+    {
+
+
+        $users=User::all();
+        $Roles=Role::all();
+
+
+        $informationArray=Array(
+            'users'=>$users,
+            'Roles'=>$Roles
+        );
+
+
+        return view('Admin.AssignDepartmentAdmin',$informationArray);
+    }
+
+
 
 
 

@@ -109,6 +109,15 @@
                                 <span class="menu-text">Change User Role</span>
                             </a>
                         </li>
+
+
+                        <li>
+                            <a href="{{url('SystemAdministrator/AssignDepartmentAdmin')}}">
+                                <span class="menu-text">Assign Department Admin </span>
+                            </a>
+                        </li>
+
+
                         <li>
                             <a href="#">
                                 <span class="menu-text">Reset Password</span>
