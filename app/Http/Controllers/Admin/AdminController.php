@@ -142,17 +142,36 @@ class AdminController extends Controller
     {
 
 
-        $users=User::all();
-        $Roles=Role::all();
+
+        app()->setLocale(Session::get('locale'));
+        //$users=User::with('roles')->where("name","=","IwDepartmentAdmin")->get();
+        $users = User::role('IwDepartmentAdmin')->get();
+
+        //dd($users);
+        $Departments=Department::all();
 
 
         $informationArray=Array(
             'users'=>$users,
-            'Roles'=>$Roles
+            'Departments'=>$Departments
         );
 
 
         return view('Admin.AssignDepartmentAdmin',$informationArray);
+    }
+
+
+    public function StoreUserDepartment(Request $request)
+
+    {
+
+        $Department=Department::find($request->Department);
+        $Department->user_id=$request->id;
+        $Department->save();
+        return redirect()->back();
+
+
+
     }
 
 

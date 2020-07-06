@@ -33,6 +33,7 @@ class HomeController extends Controller
             case "SystemAdministrator": return redirect("SystemAdministrator"); break;
             case "ClientAgent": return redirect("ClientAgent"); break;
             case "TaskManager": return redirect("TaskManager"); break;
+            case "IwDepartmentAdmin": return redirect("IwDepartmentAdmin"); break;
             default: dd("on");
         }
 

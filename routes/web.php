@@ -44,15 +44,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdministrator']], function () {
-    // CreateUser changeUserRole  StoreUserRole  StoreUserPassword  AssignDepartmentAdmin
+    // CreateUser changeUserRole  StoreUserRole  StoreUserPassword  AssignDepartmentAdmin  StoreUserDepartment
         Route::get('/','Admin\AdminController@index');
         Route::get('/CreateUser','Admin\AdminController@create');
         Route::post('/StoreUser','Admin\AdminController@StoreUser');
         Route::get('/changeUserRole','Admin\AdminController@changeUserRole');
         Route::post('/StoreUserRole','Admin\AdminController@StoreUserRole');
         Route::post('/StoreUserPassword','Admin\AdminController@StoreUserPassword');
-
-       Route::get('/AssignDepartmentAdmin','Admin\AdminController@AssignDepartmentAdmin');
+        Route::post('/StoreUserDepartment','Admin\AdminController@StoreUserDepartment');
+        Route::get('/AssignDepartmentAdmin','Admin\AdminController@AssignDepartmentAdmin');
 
 });
 
@@ -73,12 +73,23 @@ Route::group(['prefix'=>'ClientAgent','middleware' => ['role:ClientAgent']], fun
 
 
 
-
+ // IwDepartmentAdmin
 
 Route::group(['prefix'=>'TaskManager','middleware' => ['role:TaskManager']], function () {
     // CreateUser
     Route::get('/','TaskManager\TaskManagerController@index');
     Route::post('/AssingDepartment','TaskManager\TaskManagerController@AssingDepartment');
+
+});
+
+
+
+
+
+Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentAdmin']], function () {
+    // CreateUser
+    Route::get('/','IwDepartmentAdmin\IwDepartmentAdminController@index');
+
 
 });
 

@@ -28,7 +28,8 @@ return [
      'ChangeRole'=>'تغيير صلاحيات المستخدم',
     'UserOption'=>'تعديلات المتسخدم',
     'ChangeRoleAction'=>'تغيير صلاحيه المتسخدم ',
-    'ChangeUserPassword'=>'اعاده تعيين كلمه المرور'
+    'ChangeUserPassword'=>'اعاده تعيين كلمه المرور',
+     'ChangeUserDepartment'=>' تعيين مدير القسم',
 
 ];
 ?>

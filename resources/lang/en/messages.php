@@ -5,7 +5,7 @@ return [
     'ticket_form'=>'Ticket creation form',
     'Create_Users'=>'Create Users',
     'Create_ticket'=>'Create Ticket',
-   'ticket_information'=>'ticket information',
+    'ticket_information'=>'ticket information',
     'success'=>'success',
     'ticket_created'=>'ticket has been created',
     'Ticket Code'=>'ticket code',
@@ -26,6 +26,7 @@ return [
     'UserOption'=>'User Option',
     'ChangeUserPassword'=>'Change User Password',
     'GetUserDetails'=>' View User',
+    'ChangeUserDepartment'=>' Change User Department',
 
 ];
 ?>

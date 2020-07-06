@@ -12,7 +12,7 @@
                 <li>
                     <a href="#">Users</a>
                 </li>
-                <li class="active">Create new User</li>
+                <li class="active">Assgin Department</li>
             </ul>
         </div>
         <!-- /Page Breadcrumb -->
@@ -51,7 +51,7 @@
                 <div class="col-xs-12 col-md-12">
                     <div class="widget">
                         <div class="widget-header  with-footer">
-                            <span class="widget-caption">{{trans('messages.ChangeRole')}}</span>
+                            <span class="widget-caption">{{trans('messages.ChangeUserDepartment')}}</span>
                             <div class="widget-buttons">
                                 <a href="#" data-toggle="maximize">
                                     <i class="fa fa-expand"></i>
@@ -79,10 +79,6 @@
                                             </th>
 
 
-                                            <th>
-                                                {{ trans('messages.UserRole') }}
-                                            </th>
-
                                             <th class="numeric">
                                                 {{ trans('messages.Action') }}
                                             </th>
@@ -93,10 +89,8 @@
                                             <tr>
                                                 <td>{{$user->name}}</td>
                                                 <td>{{$user->email}}</td>
-                                                <td>{{$user->roles->pluck('Arabic_Name')[0]}}</td>
                                                 <td>
-                                                    <a id="{{$user->id}}" class=" btn btn-danger ChangeRole"> {{ trans('messages.ChangeRoleAction') }}</a>
-
+                                                    <a id="{{$user->id}}" class=" btn btn-danger ChangeRole"> {{ trans('messages.ChangeUserDepartment') }}</a>
                                                 </td>
 
                                             </tr>
@@ -109,19 +103,21 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Chose Role</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel">Chose Department</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <form class="form-inline" method="post" action="{{url('SystemAdministrator/StoreUserRole')}}">
+                                                <form class="form-inline" method="post" action="{{url('SystemAdministrator/StoreUserDepartment')}}">
                                                     @csrf
                                                     <div class="modal-body">
 
+
+
                                                         <div class="form-group">
-                                                            <select class="form-control  input-lg Roles" name="Role">
-                                                                @foreach($Roles as $Role)
-                                                                    <option value="{{$Role->id}}">{{$Role->Arabic_Name}}</option>
+                                                            <select class="form-control  input-lg Roles" name="Department">
+                                                                @foreach($Departments as $Department)
+                                                                    <option value="{{$Department->id}}">{{$Department->name}}</option>
                                                                 @endforeach
                                                             </select>
                                                             <input type="hidden" class="id" name="id" >
