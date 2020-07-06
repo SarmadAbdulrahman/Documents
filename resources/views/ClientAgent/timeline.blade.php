@@ -50,7 +50,7 @@
                                 <span class="widget-caption">Inline ticket</span>
                             </div>
                             <div class="widget-body bordered-left bordered-warning">
-                                <form class="form-inline"  role="form" method="post" action="{{url('ClientAgent/StoreReply')}}">
+                                <form class="form-inline"  role="form" method="post" action="{{url('IwDepartmentAdmin/StoreReply')}}">
                                     @csrf
                                     <input type="hidden" name="id" value="{{$id}}">
                                     <div class="form-group ">
@@ -75,40 +75,43 @@
 
 
 
-                    <li class="timeline-node">
-                        <a class="btn btn-yellow">{{Carbon\Carbon::parse($TicketDetail->created_at)->format('d-m-Y i')}}</a>
-                    </li>
+                        <li class="timeline-node">
+                            <a class="btn btn-yellow">{{Carbon\Carbon::parse($TicketDetail->created_at)->format('d-m-Y i')}}</a>
+                        </li>
 
-                    @if($TicketDetail->agent_comment!=null)
-                    <li>
-                        <div class="timeline-datetime">
+                        @if($TicketDetail->agent_comment!=null)
+                            <li>
+                                <div class="timeline-datetime">
                                 <span class="timeline-time">
 
                                 </span><span class="timeline-date">{{Carbon\Carbon::parse($TicketDetail->created_at)->format('d-m-Y i')}}</span>
-                        </div>
-                        <div class="timeline-badge danger">
-                            <i class="fa fa-exclamation font-120"></i>
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-header bordered-bottom bordered-blue">
+                                </div>
+                                <div class="timeline-badge danger">
+                                    <i class="fa fa-exclamation font-120"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-header bordered-bottom bordered-blue">
                                     <span class="timeline-title danger">
-                                      Agent
+
+                                      Agent    @if($TicketDetail->agent_id!=null)
+                                            <p>{{App\User::find($TicketDetail->agent_id)->name}}</p>
+                                        @endif
                                     </span>
-                                <p class="timeline-datetime">
-                                    <small class="text-muted">
-                                        <i class="glyphicon glyphicon-time">
-                                        </i>
-                                        <span class="timeline-date">Yesterday</span>
-                                        -
-                                        <span class="timeline-time">7:00</span>
-                                    </small>
-                                </p>
-                            </div>
-                            <div class="timeline-body">
-                                <p>{{$TicketDetail->agent_comment}}</p>
-                            </div>
-                        </div>
-                    </li>
+                                        <p class="timeline-datetime">
+                                            <small class="text-muted">
+                                                <i class="glyphicon glyphicon-time">
+                                                </i>
+                                                <span class="timeline-date">Yesterday</span>
+                                                -
+                                                <span class="timeline-time">7:00</span>
+                                            </small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>{{$TicketDetail->agent_comment}}</p>
+                                    </div>
+                                </div>
+                            </li>
 
                         @else
 
@@ -142,7 +145,12 @@
                                     </p>
                                 </div>
                                 <div class="timeline-body">
-                                    <a href="#">Client</a> Reply
+                                    <a href="#">Client</a>
+
+                                    @if($TicketDetail->customer_id!=null)
+                                        <p>{{App\User::find($TicketDetail->customer_id)->name}}</p>
+                                    @endif
+
 
                                     <div class="tl-wide text-center" style="padding: 5px; margin-top:10px; margin-bottom: 10px;">
                                         <img src="assets/img/temp1.png" alt="" style="max-height: 158px;max-width: 100%;">
@@ -153,10 +161,10 @@
                         </li>
 
 
-                    <li class="timeline-node">
-                        <a class="btn btn-info">{{Carbon\Carbon::parse($TicketDetail->created_at)->format('d-m-Y i')}}</a>
-                    </li>
-            @endforeach
+                        <li class="timeline-node">
+                            <a class="btn btn-info">{{Carbon\Carbon::parse($TicketDetail->created_at)->format('d-m-Y i')}}</a>
+                        </li>
+                    @endforeach
 
                 </ul>
             </div>

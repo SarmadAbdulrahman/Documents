@@ -90,7 +90,7 @@ Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentA
     // CreateUser  GetDetails  IwDepartmentAdmin
     Route::get('/','IwDepartmentAdmin\IwDepartmentAdminController@index');
     Route::get('/GetDetails','IwDepartmentAdmin\IwDepartmentAdminController@GetDetails');
-    Route::post('/IwDepartmentAdmin','IwDepartmentAdmin\IwDepartmentAdminController@IwDepartmentAdmin');
+    Route::post('/StoreReply','IwDepartmentAdmin\IwDepartmentAdminController@StoreReply');
 
 
 });

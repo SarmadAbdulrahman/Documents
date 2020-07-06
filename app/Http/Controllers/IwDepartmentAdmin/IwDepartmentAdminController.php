@@ -9,6 +9,8 @@ use App\TicketDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Validator;
+
 
 class IwDepartmentAdminController extends Controller
 {
@@ -44,12 +46,31 @@ class IwDepartmentAdminController extends Controller
     }
 
 
-    public function IwDepartmentAdmin(Request $request)
+    public function StoreReply(Request $request)
 
     {
 
 
+        $validator = Validator::make($request->all(), [
+            'reply' => 'required',
+            'id' => 'required',
+        ]);
 
+        if ($validator->fails()) {
+
+            return redirect()->back();
+        }
+
+
+        TicketDetail::create([
+             'agent_id'=>auth()->user()->id,
+             'agent_comment'=>$request["reply"]
+            , 'ticket_id'=>$request["id"]
+        ]);
+
+
+
+        return redirect()->back();
 
 
     }

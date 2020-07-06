@@ -127,8 +127,9 @@ class ClientAgentController extends Controller
 
 
         TicketDetail::create([
-             'customer_comment'=>$request["reply"]
-            , 'ticket_id'=>$request["id"]
+             'customer_comment'=>$request["reply"],
+               'customer_id'=>auth()->user()->id,
+             'ticket_id'=>$request["id"]
         ]);
 
 

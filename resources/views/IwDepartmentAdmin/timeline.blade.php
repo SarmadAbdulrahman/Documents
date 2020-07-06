@@ -92,7 +92,10 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-header bordered-bottom bordered-blue">
                                     <span class="timeline-title danger">
-                                      Agent
+
+                                      Agent    @if($TicketDetail->agent_id!=null)
+                                            <p>{{App\User::find($TicketDetail->agent_id)->name}}</p>
+                                            @endif
                                     </span>
                                         <p class="timeline-datetime">
                                             <small class="text-muted">
@@ -142,7 +145,12 @@
                                     </p>
                                 </div>
                                 <div class="timeline-body">
-                                    <a href="#">Client</a> Reply
+                                    <a href="#">Client</a>
+
+                                    @if($TicketDetail->customer_id!=null)
+                                        <p>{{App\User::find($TicketDetail->customer_id)->name}}</p>
+                                    @endif
+
 
                                     <div class="tl-wide text-center" style="padding: 5px; margin-top:10px; margin-bottom: 10px;">
                                         <img src="assets/img/temp1.png" alt="" style="max-height: 158px;max-width: 100%;">
