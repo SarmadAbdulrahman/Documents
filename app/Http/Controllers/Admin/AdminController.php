@@ -42,7 +42,6 @@ class AdminController extends Controller
 
         $Roles=Role::all();
         $departments=Department::all();
-      //  app()->setLocale('ar');
         app()->setLocale(Session::get('locale'));
         $InformationArray=Array(
             "Roles"=>$Roles,
@@ -78,6 +77,13 @@ class AdminController extends Controller
 
 
         $user->assignRole(Role::find($request["Role"]));
+
+        if($request["Role"]==3){
+            $d=Department::find($request["Department"]);
+            $d->user_id=$user->id;
+            $d->save();
+
+        }
 
 
 

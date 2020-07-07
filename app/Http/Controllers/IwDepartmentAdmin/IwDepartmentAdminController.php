@@ -21,6 +21,7 @@ class IwDepartmentAdminController extends Controller
 
         app()->setLocale(Session::get('locale'));
         $userId=auth()->user()->id;
+
         $DepartmentId=Department::where('user_id',"=",$userId)->get()[0]["id"];
         $tickets=Ticket::where('department_id',"=",$DepartmentId)->get();
         $Users=User::all();

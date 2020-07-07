@@ -50,7 +50,7 @@
                                 <span class="widget-caption">Inline ticket</span>
                             </div>
                             <div class="widget-body bordered-left bordered-warning">
-                                <form class="form-inline"  role="form" method="post" action="{{url('IwDepartmentAdmin/StoreReply')}}">
+                                <form class="form-inline"  role="form" method="post" action="{{url('ClientAgent/StoreReply')}}">
                                     @csrf
                                     <input type="hidden" name="id" value="{{$id}}">
                                     <div class="form-group ">

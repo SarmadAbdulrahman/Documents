@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1dc18d71-e8ad-4b79-9f8b-98ac2a22c497" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IwDepartmentAdmin/IwDepartmentAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IwDepartmentAdmin/IwDepartmentAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/IwDepartmentAdmin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/IwDepartmentAdmin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/CreateUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/CreateUser.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ClientAgent/timeline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ClientAgent/timeline.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +176,8 @@
       <workItem from="1593412281401" duration="4936000" />
       <workItem from="1593494470202" duration="6640000" />
       <workItem from="1593926179633" duration="7056000" />
-      <workItem from="1594011720188" duration="6547000" />
+      <workItem from="1594011720188" duration="6694000" />
+      <workItem from="1594097389077" duration="2284000" />
     </task>
     <servers />
   </component>
@@ -201,10 +201,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="653" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1593320886239" />
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1594011721132">
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1594097389704">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1594011721132" />
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1594097389704" />
     <state x="422" y="298" key="com.intellij.ide.util.TipDialog/35.23.1405.877@35.23.1405.877" timestamp="1593406157910" />
     <state x="450" y="369" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1592981217336">
       <screen x="0" y="0" width="1440" height="900" />

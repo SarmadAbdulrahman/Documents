@@ -106,6 +106,15 @@
                                             </div>
 
 
+                                            <div class="form-group cc">
+                                                <select class="form-control Departments" name="Department">
+                                                    @foreach($departments as $department)
+                                                        <option value="{{$department->id}}">{{$department->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+
+
                                             <hr class="wide"/>
                                             <button  type="submit"  class="btn btn-blue">{{ trans('messages.Save') }}</button>
                                             </form>
@@ -129,6 +138,26 @@
             $('.Roles').select2({
                 placeholder: 'Select Roles'
             });
+
+
+
+            $('.cc').hide();
+
+            $('.Departments').select2({
+                placeholder: 'Select Departments'
+            });
+
+
+            $('.Roles').on('change',function () {
+
+                $v=$(this).val();
+               if($v==3){
+
+                   $('.cc').show();
+               }
+
+            });
+
 
             //  $("#myForm").submit();
 
