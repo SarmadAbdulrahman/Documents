@@ -38,13 +38,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 | this is for SystemAdministrator of the system
 |
 |
-|   ClientAgent
+|   
 |
 */
 
 
 Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdministrator']], function () {
-    // CreateUser changeUserRole  StoreUserRole  StoreUserPassword  AssignDepartmentAdmin  StoreUserDepartment
+
+
+
         Route::get('/','Admin\AdminController@index');
         Route::get('/CreateUser','Admin\AdminController@create');
         Route::post('/StoreUser','Admin\AdminController@StoreUser');
@@ -57,10 +59,28 @@ Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdmin
 });
 
 
-//
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes ClientAgent
+|--------------------------------------------------------------------------
+| this is for ClientAgent of the system
+|
+|
+|   ClientAgent
+|
+*/
+
+
+
+
 
 Route::group(['prefix'=>'ClientAgent','middleware' => ['role:ClientAgent']], function () {
-    // CreateUser  StoreUser   GetDetails
+  
+
+
     Route::get('/','ClientAgent\ClientAgentController@index');
     Route::get('/CreateTicket','ClientAgent\ClientAgentController@CreateTicket');
     Route::post('/StoreTicket','ClientAgent\ClientAgentController@StoreTicket');
@@ -73,10 +93,22 @@ Route::group(['prefix'=>'ClientAgent','middleware' => ['role:ClientAgent']], fun
 
 
 
- // IwDepartmentAdmin
+/*
+|--------------------------------------------------------------------------
+| Web Routes TaskManager
+|--------------------------------------------------------------------------
+| this is for TaskManager of the system
+|
+|
+|   TaskManager
+|
+*/
+
 
 Route::group(['prefix'=>'TaskManager','middleware' => ['role:TaskManager']], function () {
-    // CreateUser  AssingTaskToUser
+  
+
+
     Route::get('/','TaskManager\TaskManagerController@index');
     Route::post('/AssingDepartment','TaskManager\TaskManagerController@AssingDepartment');
 
@@ -84,10 +116,25 @@ Route::group(['prefix'=>'TaskManager','middleware' => ['role:TaskManager']], fun
 
 
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes IwDepartmentAdmin
+|--------------------------------------------------------------------------
+| this is for IwDepartmentAdmin of the system
+|
+|
+|   IwDepartmentAdmin
+|
+*/
+
+
+
+
 
 
 Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentAdmin']], function () {
-    // CreateUser  GetDetails  IwDepartmentAdmin AssingTaskToUser
+   
+
     Route::get('/','IwDepartmentAdmin\IwDepartmentAdminController@index');
     Route::get('/GetDetails','IwDepartmentAdmin\IwDepartmentAdminController@GetDetails');
     Route::post('/StoreReply','IwDepartmentAdmin\IwDepartmentAdminController@StoreReply');
@@ -95,7 +142,17 @@ Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentA
 
 });
 
-//IwAgent
+/*
+|--------------------------------------------------------------------------
+| Web Routes IwAgent
+|--------------------------------------------------------------------------
+| this is for IwAgent of the system
+|      
+|
+|   
+|
+*/
+
 
 Route::group(['prefix'=>'IwAgent','middleware' => ['role:IwAgent']], function () {
     
