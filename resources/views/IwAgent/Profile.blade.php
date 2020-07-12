@@ -61,17 +61,14 @@
                                     <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 profile-stats">
                                         <div class="row">
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 stats-col">
-                                                <div class="stats-value pink">284</div>
+                                                <div class="stats-value pink">{{$countticket}}</div>
                                                 <div class="stats-title">  {{ trans('messages.countTicket') }}</div>
                                             </div>  
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 stats-col">
-                                                <div class="stats-value pink">803</div>
+                                                <div class="stats-value pink">{{$openticket}}</div>
                                                 <div class="stats-title">{{ trans('messages.pendingTicket') }}</div>
                                             </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 stats-col">
-                                                <div class="stats-value pink">1207</div>
-                                                <div class="stats-title">POSTS</div>
-                                            </div>
+
                                         </div>
                                   
                                     </div>
@@ -97,82 +94,13 @@
                                             <div class="tab-content tabs-flat">
                                                 <div id="overview" class="tab-pane active">
 
-
-
-
-                                                 
-
-
                                                 </div>
                                                 <div id="timeline" class="tab-pane">
                                                     <ul class="timeline animated fadeInDown">
+                                                  @foreach($tickets as $ticket)
                                                         <li>
                                                             <div class="timeline-datetime">
-                                                                <span class="timeline-time">
-                                                                    8:19
-                                                                </span><span class="timeline-date">Today</span>
-                                                            </div>
-                                                            <div class="timeline-badge blue">
-                                                                <i class="fa fa-tag"></i>
-                                                            </div>
-                                                            <div class="timeline-panel">
-                                                                <div class="timeline-header bordered-bottom bordered-blue">
-                                                                    <span class="timeline-title">
-                                                                        New Items Arrived
-                                                                    </span>
-                                                                    <p class="timeline-datetime">
-                                                                        <small class="text-muted">
-                                                                            <i class="glyphicon glyphicon-time">
-                                                                            </i>
-                                                                            <span class="timeline-date">Today</span>
-                                                                            -
-                                                                            <span class="timeline-time">8:19</span>
-                                                                        </small>
-                                                                    </p>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <p>Purchased new stationary items for head office</p>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="timeline-inverted">
-                                                            <div class="timeline-datetime">
-                                                                <span class="timeline-time">
-                                                                    3:10
-                                                                </span><span class="timeline-date">Today</span>
-                                                            </div>
-                                                            <div class="timeline-badge darkorange">
-                                                                <i class="fa fa-map-marker font-120"></i>
-                                                            </div>
-                                                            <div class="timeline-panel bordered-right-3 bordered-orange">
-                                                                <div class="timeline-header bordered-bottom bordered-blue">
-                                                                    <span class="timeline-title">
-                                                                        Visit Appointment
-                                                                    </span>
-                                                                    <p class="timeline-datetime">
-                                                                        <small class="text-muted">
-                                                                            <i class="glyphicon glyphicon-time">
-                                                                            </i>
-                                                                            <span class="timeline-date">Today</span>
-                                                                            -
-                                                                            <span class="timeline-time">3:10</span>
-                                                                        </small>
-                                                                    </p>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <p>Outdoor visit at California State Route 85 with John Boltana &amp; Harry Piterson regarding to setup a new show room.</p>
-                                                                    <p>
-                                                                        <i class="orange fa fa-exclamation"></i> New task added for <span><a href="#" class="info">James Dean</a></span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="timeline-datetime">
-                                                                <span class="timeline-time">
-                                                                    8:19
-                                                                </span><span class="timeline-date">Yesterday</span>
+                                                            {{Carbon\Carbon::parse($ticket->created_at)->format('d-m-Y i')}}
                                                             </div>
                                                             <div class="timeline-badge sky">
                                                                 <i class="fa fa-bar-chart-o"></i>
@@ -180,31 +108,30 @@
                                                             <div class="timeline-panel bordered-top-3 bordered-azure">
                                                                 <div class="timeline-header bordered-bottom bordered-blue">
                                                                     <span class="timeline-title">
-                                                                        Bank Report
+                                                                       Ticket number
                                                                     </span>
                                                                     <p class="timeline-datetime">
                                                                         <small class="text-muted">
                                                                             <i class="glyphicon glyphicon-time">
                                                                             </i>
-                                                                            <span class="timeline-date">Yesterday</span>
-                                                                            -
-                                                                            <span class="timeline-time">8:19</span>
+                                                                            {{Carbon\Carbon::parse($ticket->created_at)->format('d-m-Y i')}}
                                                                         </small>
                                                                     </p>
                                                                 </div>
                                                                 <div class="timeline-body">
                                                                     <p>
-                                                                        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sem neque sed ipsum.
+                                                                    
+                                                                     {{$ticket->id}}
                                                                     </p>
-                                                                    Tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+                                        
                                                                 </div>
                                                             </div>
                                                         </li>
                                                         <li class="timeline-inverted">
                                                             <div class="timeline-datetime">
                                                                 <span class="timeline-time">
-                                                                    6:08
-                                                                </span><span class="timeline-date">Yesterday</span>
+                                                                  
+                                                                </span><span class="timeline-date">{{Carbon\Carbon::parse($ticket->created_at)->format('d-m-Y i')}}</span>
                                                             </div>
                                                             <div class="timeline-badge sky">
                                                                 <img src="assets/img/avatars/sergey-azovskiy.jpg" class="badge-picture" />
@@ -212,84 +139,33 @@
                                                             <div class="timeline-panel">
                                                                 <div class="timeline-header bordered-bottom bordered-blue">
                                                                     <span class="timeline-title">
-                                                                        <a href="default.htm">Sergey Azovskiy</a> has commented on your <a href="default.htm">status</a>
+                                                                        <a href="default.htm"></a>Status <a href="default.htm">{{$ticket->progress}}   </a>
                                                                     </span>
+
+                                                                     <span class="timeline-title">
+                                                                        <a href="{{url('IwAgent/GetDetails?id=')}}{{$ticket->id}}">{{$ticket->issue_name}} </a> 
+                                                                    </span>
+                                                                    <br>
+                                                                    <p> </p>
                                                                     <p class="timeline-datetime">
                                                                         <small class="text-muted">
                                                                             <i class="glyphicon glyphicon-time">
                                                                             </i>
-                                                                            <span class="timeline-date">Yesterday</span>
+                                                                            <span class="timeline-date">{{Carbon\Carbon::parse($ticket->created_at)->format('d-m-Y i')}}</span>
                                                                             -
-                                                                            <span class="timeline-time">6:08</span>
+                                                                          
                                                                         </small>
                                                                     </p>
                                                                 </div>
                                                                 <div class="timeline-body">
                                                                     <p>
-                                                                        <i class="orange fa fa-quote-left"></i> Happy Birthday Lydia.
+                                                                        <i class="orange fa fa-quote-left"></i> {{App\TicketType::find($ticket->ticket_type_id)->ar_name}} 
                                                                     </p>
                                                                 </div>
                                                             </div>
                                                         </li>
-                                                        <li>
-                                                            <div class="timeline-datetime">
-                                                                <span class="timeline-time">
-                                                                    7:00
-                                                                </span><span class="timeline-date">Yesterday</span>
-                                                            </div>
-                                                            <div class="timeline-badge danger">
-                                                                <i class="fa fa-exclamation font-120"></i>
-                                                            </div>
-                                                            <div class="timeline-panel">
-                                                                <div class="timeline-header bordered-bottom bordered-blue">
-                                                                    <span class="timeline-title danger">
-                                                                        Deadline Added
-                                                                    </span>
-                                                                    <p class="timeline-datetime">
-                                                                        <small class="text-muted">
-                                                                            <i class="glyphicon glyphicon-time">
-                                                                            </i>
-                                                                            <span class="timeline-date">Yesterday</span>
-                                                                            -
-                                                                            <span class="timeline-time">7:00</span>
-                                                                        </small>
-                                                                    </p>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <p>Dyvia Phillips added new milestone <span><a class="danger" href="#">UI</a></span> Lorem ipsum dolor sit amet consiquest dio</p>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="timeline-inverted">
-                                                            <div class="timeline-datetime">
-                                                                <span class="timeline-time">
-                                                                    3:09
-                                                                </span><span class="timeline-date">Yesterday</span>
-                                                            </div>
-                                                            <div class="timeline-badge">
-                                                                <i class="fa fa-picture-o darkpink"></i>
-                                                            </div>
-                                                            <div class="timeline-panel">
-                                                                <div class="timeline-header bordered-bottom bordered-blue">
-                                                                    <p class="timeline-datetime">
-                                                                        <small class="text-muted">
-                                                                            <i class="glyphicon glyphicon-time">
-                                                                            </i>
-                                                                            <span class="timeline-date">Yesterday</span>
-                                                                            -
-                                                                            <span class="timeline-time">3:09</span>
-                                                                        </small>
-                                                                    </p>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <a href="#">John Travolta</a> shared an image on <a href="#">Dribble</a>
-                                                                    <div class="tl-wide text-center" style="padding: 5px; margin-top:10px; margin-bottom: 10px;">
-                                                                        <img src="assets/img/temp1.png" alt="" style="max-height: 158px;max-width: 100%;">
-                                                                    </div>
-                                                                    <i class="text-muted text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i>
-                                                                </div>
-                                                            </div>
-                                                        </li>
+                                                        @endforeach
+
                                                         <li class="timeline-node">
                                                             <a class="btn btn-yellow">LOAD MORE</a>
                                                         </li>

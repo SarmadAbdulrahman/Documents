@@ -97,6 +97,17 @@ class IwAgentController extends Controller
 
         // profile
 
-        return view('IwAgent.profile');
+       // $TicketDetails=TicketDetail::where('ticket_id','=',$request->id)->orderBy('created_at', 'desc')->get();
+       $tickets=Ticket::where('agent_id',"=",auth()->user()->id)->get();
+      //dd($tickets);
+      $CountOfOpenTicket=Ticket::where('agent_id',"=",auth()->user()->id)->where('progress',"=","open")->count();
+      $CountOfTicket=Ticket::where('agent_id',"=",auth()->user()->id)->count();
+     
+        $InfromationArray=Array(
+            'tickets'=>$tickets,
+            'openticket'=>$CountOfOpenTicket,
+            'countticket'=>$CountOfTicket
+        );
+        return view('IwAgent.profile',$InfromationArray);
     }
 }
