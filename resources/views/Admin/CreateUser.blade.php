@@ -90,7 +90,7 @@
 
                                             <div class="form-group">
                                                 <span class="input-icon icon-right">
-                                                    <input type="text" class="form-control"  name="passwordInput" id="passwordInput" placeholder="Password">
+                                                    <input type="password" class="form-control"  name="passwordInput" id="passwordInput" placeholder="Password">
                                                     <i class="fa fa-lock circular"></i>
                                                 </span>
                                             </div>
@@ -173,12 +173,20 @@
                     url: frm.attr('action'),
                     data: frm.serialize(),
                     success: function (data) {
-                        console.log('Submission was successful.');
-                        console.log(data);
+                     //   console.log('Submission was successful.');
+                      //  console.log(data);
+
+
+                            Swal.fire(
+                            '{{ trans('messages.success') }}',
+            
+                            'success'
+                        );
                     },
                     error: function (data) {
-                        console.log('An error occurred.');
-                        console.log(data);
+                       // console.log('An error occurred.');
+                      //  console.log(data);
+                        alert("there is error in feilds");
                     },
                 });
 

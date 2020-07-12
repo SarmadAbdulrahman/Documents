@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1dc18d71-e8ad-4b79-9f8b-98ac2a22c497" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IwDepartmentAdmin/IwDepartmentAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IwDepartmentAdmin/IwDepartmentAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/CreateUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/CreateUser.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ClientAgent/timeline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ClientAgent/timeline.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +175,7 @@
       <workItem from="1593494470202" duration="6640000" />
       <workItem from="1593926179633" duration="7056000" />
       <workItem from="1594011720188" duration="6694000" />
-      <workItem from="1594097389077" duration="2284000" />
+      <workItem from="1594097389077" duration="4165000" />
     </task>
     <servers />
   </component>
