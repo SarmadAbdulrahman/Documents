@@ -2,6 +2,10 @@
 return [
     'registration' => 'registration form',
     'Save' => 'save',
+    'countTicket' => 'count Ticket',
+    'pendingTicket' => 'pending Ticket',
+    'conatct' => 'conatct',
+    'event' => 'event',
     'ticket_form'=>'Ticket creation form',
     'Create_Users'=>'Create Users',
     'Create_ticket'=>'Create Ticket',

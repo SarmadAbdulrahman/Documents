@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Spatie\Permission\Models\Role;
 use Validator;
+use App\Manager;
 
 class AdminController extends Controller
 {
@@ -82,6 +83,16 @@ class AdminController extends Controller
             $d=Department::find($request["Department"]);
             $d->user_id=$user->id;
             $d->save();
+
+        }
+
+
+        if($request["Role"]==5){
+            
+            Manager::Create([
+                "emp_id"=>$user->id,
+                "manager_id"=>$request["Department"]
+            ]);
 
         }
 

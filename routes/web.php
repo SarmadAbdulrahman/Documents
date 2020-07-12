@@ -98,9 +98,11 @@ Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentA
 //IwAgent
 
 Route::group(['prefix'=>'IwAgent','middleware' => ['role:IwAgent']], function () {
-    // CreateUser  GetDetails  IwDepartmentAdmin AssingTaskToUser
+    
      Route::get('/','IwAgent\IwAgentController@index');
-
+     Route::get('/GetDetails','IwAgent\IwAgentController@GetDetails');
+     Route::post('/StoreReply','IwAgent\IwAgentController@StoreReply');
+     Route::get('/profile','IwAgent\IwAgentController@profile');
 
 });
 

@@ -4,6 +4,10 @@ return [
 
 
      'registration' => 'لوحه التسجيل',
+     'countTicket' => 'عدد المهام',
+     'pendingTicket' => 'المهام المتعلقه',
+     'conatct' => 'تفاصيل التواصل',
+     'event' => 'احدث التذاكر',
      'Save' => 'خزن',
      'Create_Users'=>'انشاء المستخدم',
      'Create_ticket'=>'انشاء تذكره',

@@ -156,6 +156,51 @@
                 @endrole()
 
 
+
+
+
+      @role('IwAgent')
+                <li>
+                    <a href="#" class="menu-dropdown">
+                        <i class="menu-icon fa fa-delicious"></i>
+                        <span class="menu-text"> Department  </span>
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="{{url('IwAgent/News')}}">
+                                <span class="menu-text">News</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{url('IwAgent/profile')}}">
+                                <span class="menu-text">My Profile</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                @endrole()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <li>
                     <a href="#" class="menu-dropdown">
                         <i class="menu-icon fa fa-language"></i>
