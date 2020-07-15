@@ -110,4 +110,13 @@ class IwAgentController extends Controller
         );
         return view('IwAgent.profile',$InfromationArray);
     }
+
+
+    public function News()
+    {
+
+
+
+        return view('IwAgent.News'); 
+    }
 }

@@ -156,11 +156,13 @@ Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentA
 
 Route::group(['prefix'=>'IwAgent','middleware' => ['role:IwAgent']], function () {
     
+
+    // News
      Route::get('/','IwAgent\IwAgentController@index');
      Route::get('/GetDetails','IwAgent\IwAgentController@GetDetails');
      Route::post('/StoreReply','IwAgent\IwAgentController@StoreReply');
      Route::get('/profile','IwAgent\IwAgentController@profile');
-
+     Route::get('/News','IwAgent\IwAgentController@News');
 });
 
 
