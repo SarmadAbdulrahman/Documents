@@ -23,6 +23,23 @@
 <script src="{{asset("assets/js/charts/flot/jquery.flot.pie.js")}}"></script>
 <script src="{{asset("assets/js/charts/flot/jquery.flot.tooltip.js")}}"></script>
 <script src="{{asset("assets/js/charts/flot/jquery.flot.orderbars.js")}}"></script>
+
+
+   <script type="text/javascript" src="{{asset("assets/js/scripts/jquery-1.11.1.min.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxcore.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxdata.js")}}"></script> 
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxbuttons.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxscrollbar.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxmenu.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxcheckbox.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxlistbox.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxdropdownlist.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxgrid.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxgrid.sort.js")}}"></script> 
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxgrid.pager.js")}}"></script> 
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxgrid.selection.js")}}"></script> 
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxgrid.edit.js")}}"></script> 
+    <script type="text/javascript" src="{{asset("assets/js/scripts/jqwidgets/demos.js")}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
 @yield('js')

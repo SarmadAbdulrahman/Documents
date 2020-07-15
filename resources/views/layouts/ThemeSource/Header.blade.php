@@ -20,13 +20,13 @@ IW this is project for  Ticket System
     <link   href="{{asset("assets/css/font-awesome.min.css")}}"  rel="stylesheet"  />
     <link   href="{{asset("assets/css/weather-icons.min.css")}}" rel="stylesheet"   />
     <!--Fonts-->
-
+  
     <!--Beyond styles-->
     <link   href="{{asset("assets/css/beyond.min.css")}}" rel="stylesheet"  type="text/css"/>
     <link   href="{{asset("assets/css/demo.min.css")}}"  rel="stylesheet" />
     <link   href="{{asset("assets/css/typicons.min.css")}}" rel="stylesheet" />
     <link   href="{{asset("assets/css/animate.min.css")}}" rel="stylesheet"/>
-
+    <link  href="{{asset("assets/js/jqwidgets/jqwidgets/styles/jqx.base.css")}}"  rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->

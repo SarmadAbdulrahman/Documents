@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 use Spatie\Permission\Models\Role;
 use Validator;
 use App\Manager;
+use App\Ticket;
 
 class AdminController extends Controller
 {
@@ -188,6 +189,29 @@ class AdminController extends Controller
         return redirect()->back();
 
 
+
+    }
+
+
+    public function rTasks(Request $request)
+    {
+
+
+
+
+        return view('Admin.ReportTask');
+    }
+
+
+    public function rTasksReport (Request $request)
+    
+    {
+
+
+        $tickets=Ticket::all();
+
+
+       return response()->json(['tickets'=>$tickets],200);
 
     }
 

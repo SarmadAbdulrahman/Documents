@@ -126,6 +126,30 @@
 
                     </ul>
                 </li>
+
+                    <li>
+                    <a href="#" class="menu-dropdown">
+                        <i class="menu-icon fa fa-file-excel-o"></i>
+                        <span class="menu-text">Reports</span>
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="{{url('SystemAdministrator/rTasks')}}">
+                                <span class="menu-text">Tasks</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+
+
+
+
                 @endrole
 
 
@@ -224,10 +248,6 @@
 
                     </ul>
                 </li>
-
-
-
-
 
             </ul>
             <!-- /Sidebar Menu -->

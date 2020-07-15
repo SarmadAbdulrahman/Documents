@@ -22,9 +22,7 @@ Route::get('/', function () {
 
 Route::get('/arabic','Helper\HelperController@arabic');
 Route::get('/english','Helper\HelperController@english');
-
 Auth::routes(['register'=>false]);
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 
@@ -33,7 +31,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes SystemAdministrator
+| Web Routes SystemAdministrator rTasks
 |--------------------------------------------------------------------------
 | this is for SystemAdministrator of the system
 |
@@ -55,6 +53,8 @@ Route::group(['prefix'=>'SystemAdministrator','middleware' => ['role:SystemAdmin
         Route::post('/StoreUserPassword','Admin\AdminController@StoreUserPassword');
         Route::post('/StoreUserDepartment','Admin\AdminController@StoreUserDepartment');
         Route::get('/AssignDepartmentAdmin','Admin\AdminController@AssignDepartmentAdmin');
+        Route::get('/rTasks','Admin\AdminController@rTasks');
+        Route::get('/rTasksReport','Admin\AdminController@rTasksReport');
 
 });
 
