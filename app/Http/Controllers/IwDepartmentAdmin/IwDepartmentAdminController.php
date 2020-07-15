@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Validator;
+use App\News;
+
 
 
 class IwDepartmentAdminController extends Controller
@@ -98,6 +100,49 @@ class IwDepartmentAdminController extends Controller
         $ticket=Ticket::find($request->id);
         $ticket->agent_id=$request->username;
         $ticket->save();
+
+        return redirect()->back();
+
+
+
+    }
+
+
+    public function News()
+    {
+
+        $userId=auth()->user()->id;
+
+        $DepartmentId=Department::where('user_id',"=",$userId)->get()[0]["id"];
+        $Newss=News::where('department_id',"=",$DepartmentId)->get();
+        $InformationArray=array(
+       'posts'=>$Newss
+        );
+
+
+
+        return view('IwDepartmentAdmin.News',$InformationArray); 
+    }
+
+
+
+    public function StoreNews(Request $request)
+    {
+
+        // StoreNews 
+        $userId=auth()->user()->id;
+
+        $DepartmentId=Department::where('user_id',"=",$userId)->get()[0]["id"];
+        $userId=auth()->user()->id;
+        News::create([
+            'user_id'=>$userId,
+            'doucment_name'=>$request['doucment_name'],
+            'doucment_type'=>$request['doucment_type'],
+            'department_id'=>$DepartmentId,
+            'descrption'=>$request['reply']
+        ]);
+
+
 
         return redirect()->back();
 

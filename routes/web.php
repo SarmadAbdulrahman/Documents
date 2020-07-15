@@ -139,6 +139,8 @@ Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentA
     Route::get('/GetDetails','IwDepartmentAdmin\IwDepartmentAdminController@GetDetails');
     Route::post('/StoreReply','IwDepartmentAdmin\IwDepartmentAdminController@StoreReply');
     Route::post('/AssingTaskToUser','IwDepartmentAdmin\IwDepartmentAdminController@AssingTaskToUser');
+    Route::get('/News','IwDepartmentAdmin\IwDepartmentAdminController@News');
+    Route::post('/StoreNews','IwDepartmentAdmin\IwDepartmentAdminController@StoreNews');
 
 });
 
@@ -157,12 +159,13 @@ Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentA
 Route::group(['prefix'=>'IwAgent','middleware' => ['role:IwAgent']], function () {
     
 
-    // News
+    // News  StoreNews
      Route::get('/','IwAgent\IwAgentController@index');
      Route::get('/GetDetails','IwAgent\IwAgentController@GetDetails');
      Route::post('/StoreReply','IwAgent\IwAgentController@StoreReply');
      Route::get('/profile','IwAgent\IwAgentController@profile');
      Route::get('/News','IwAgent\IwAgentController@News');
+     Route::post('/StoreNews','IwAgent\IwAgentController@StoreNews');
 });
 
 

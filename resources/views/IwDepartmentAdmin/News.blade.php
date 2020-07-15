@@ -69,7 +69,7 @@
                  
                                     <div class="flip-scroll">
 
-                                        <form class="form"  role="form" method="post" action="{{url('IwAgent/StoreNews')}}">
+                                        <form class="form"  role="form" method="post" action="{{url('IwDepartmentAdmin/StoreNews')}}">
                                     @csrf
                                     
 
@@ -114,7 +114,7 @@
                             <div class="widget flat radius-bordered">
                                 <div class="widget-header bordered-bottom bordered-themeprimary">
                                     <i class="widget-icon fa fa-text-width"></i>
-                                    <span class="widget-caption">Headings and Paragraphs</span>
+                                    <span class="widget-caption">Document nu. {{$post->id}}</span>
                                     <div class="widget-buttons">
                                         <a href="#" data-action="refresh">
                                             <i class="fa fa-undo"></i>
@@ -137,10 +137,7 @@
                                     <div class="widget-main">
                                         <table class="table">
                                             <thead>
-                                                <tr>
-                                                    <th width="30%">Type</th>
-                                                    <th>Example</th>
-                                                </tr>
+                                               
                                             </thead>
                                             <tbody>
 

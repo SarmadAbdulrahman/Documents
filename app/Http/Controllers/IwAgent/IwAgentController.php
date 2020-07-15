@@ -11,6 +11,7 @@ use App\User;
 use App\Department;
 use App\Manager;
 use Validator;
+use App\News;
 
 
 class IwAgentController extends Controller
@@ -115,8 +116,37 @@ class IwAgentController extends Controller
     public function News()
     {
 
+        $userId=auth()->user()->id;
+        $Newss=News::where('department_id',"=",Manager::where('emp_id',"=",$userId)->get()[0]['manager_id'])->get();
+        $InformationArray=array(
+       'posts'=>$Newss
+        );
 
 
-        return view('IwAgent.News'); 
+
+        return view('IwAgent.News',$InformationArray); 
+    }
+
+
+    public function StoreNews(Request $request)
+    {
+
+        // StoreNews 
+     
+        $userId=auth()->user()->id;
+        News::create([
+            'user_id'=>$userId,
+            'doucment_name'=>$request['doucment_name'],
+            'doucment_type'=>$request['doucment_type'],
+            'department_id'=>Manager::where('emp_id',"=",$userId)->get()[0]['manager_id'],
+            'descrption'=>$request['reply']
+        ]);
+
+
+
+        return redirect()->back();
+
+
+
     }
 }
