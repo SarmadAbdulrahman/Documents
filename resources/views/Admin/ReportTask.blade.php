@@ -63,6 +63,8 @@
                                         </a>
                                     </div>
                                 </div>
+
+
                                 <div class="widget-body">
                  
                                     <div class="flip-scroll">
@@ -80,6 +82,10 @@
 @section('js')
     <script>
         $(document).ready(function () {
+
+
+   
+
         
            // var url = "../sampledata/products.xml";
             var url = "{{url('SystemAdministrator/rTasksReport')}}";
@@ -93,7 +99,8 @@
                     { name: 'progress', type: 'string' },
                     { name: 'agent_comment', type: 'string' },
                     { name: 'Discontinued', type: 'bool' },
-                    { name: 'created_at', type: 'date' },
+                    { name: 'created_at', type: 'date'},
+                    { name: 'range', map: 'created_at', type: 'date' },
                 ],
                 url: url
             };
@@ -117,15 +124,15 @@
                 sortable: true,
                 altrows: true,
                 enabletooltips: true,
-                editable: true,
                 selectionmode: 'multiplecellsadvanced',
                 columns: [
+                    { text: 'Date', datafield: 'range', filtertype: 'range', cellsalign: 'left', width: '15%', cellsformat: 'd' },
+
                   { text: 'ticketId', columngroup: 'ProductDetails', datafield: 'id', width: 250 },
                   { text: 'ticketStatus', columngroup: 'ProductDetails', datafield: 'progress', cellsalign: 'right', align: 'right', width: 200 },
-                  { text: 'ticketComment', columngroup: 'ProductDetails', datafield: 'agent_comment', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
-                  { text: 'ticketDate', datafield: 'created_at', cellsalign: 'right', cellsrenderer: cellsrenderer, width: 100 },
-                  { text: 'ticketRate', columntype: 'checkbox', datafield: 'ticketRate' },
-    
+                  { text: 'issue_name', columngroup: 'ProductDetails', datafield: 'issue_name', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
+                  { text: 'agent_comment', columngroup: 'ProductDetails', datafield: 'agent_comment', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
+
                 ],
               
             });

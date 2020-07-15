@@ -41,7 +41,7 @@
             </div>
             <!--Header Buttons End-->
 
-            <div class="page-body">
+            <div class="page-body" dir="rtl" lang="ar">
 
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -55,7 +55,7 @@
                                     <input type="hidden" name="id" value="{{$id}}">
                                     <div class="form-group ">
                                         <label class="sr-only" for="exampleInputEmail2">Comment</label>
-                                        <textarea name="reply" id="" cols="150" rows="2"></textarea>
+                                        <textarea name="reply"  cols="150" rows="2"></textarea>
                                     </div>
 
                                     <button type="submit" class="btn btn-default">Reply</button>
@@ -108,7 +108,7 @@
                                         </p>
                                     </div>
                                     <div class="timeline-body">
-                                        <p>{{$TicketDetail->agent_comment}}</p>
+                                        <p>{!!$TicketDetail->agent_comment!!}</p>
                                     </div>
                                 </div>
                             </li>
@@ -155,7 +155,7 @@
                                     <div class="tl-wide text-center" style="padding: 5px; margin-top:10px; margin-bottom: 10px;">
                                         <img src="assets/img/temp1.png" alt="" style="max-height: 158px;max-width: 100%;">
                                     </div>
-                                    <i class="text-muted text-sm">{{$TicketDetail->customer_comment}}</i>
+                                    <i class="text-muted text-sm">{{ $TicketDetail->customer_comment }}</i>
                                 </div>
                             </div>
                         </li>
@@ -173,3 +173,17 @@
     </div>
 @endsection
 @extends('layouts.ThemeSource.footer')
+@section('js')
+    <script>
+        $(document).ready(function () {
+
+
+            $('#editor').jqxEditor({
+                height: "400px",
+                width: '700px',
+                rtl:true
+            });
+
+        });
+    </script>
+@endsection

@@ -34,6 +34,17 @@
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxcheckbox.js")}}"></script>
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxlistbox.js")}}"></script>
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxdropdownlist.js")}}"></script>
+
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxdropdownbutton.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxcolorpicker.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxwindow.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxtooltip.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxeditor.js")}}"></script>
+    <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxcheckbox.js")}}"></script>
+
+
+
+
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxgrid.js")}}"></script>
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxgrid.sort.js")}}"></script> 
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxgrid.pager.js")}}"></script> 
