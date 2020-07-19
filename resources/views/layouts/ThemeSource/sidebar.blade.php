@@ -143,6 +143,14 @@
                         </li>
 
 
+
+                         <li>
+                            <a href="{{url('SystemAdministrator/TicketDetials')}}">
+                                <span class="menu-text">Ticket Detials</span>
+                            </a>
+                        </li>
+
+
                     </ul>
                 </li>
 

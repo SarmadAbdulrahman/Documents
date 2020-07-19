@@ -149,4 +149,58 @@ class IwDepartmentAdminController extends Controller
 
 
     }
+
+
+
+
+    public function profile()
+    {
+        # code...
+        app()->setLocale(Session::get('locale'));
+
+        // profile
+
+       // $TicketDetails=TicketDetail::where('ticket_id','=',$request->id)->orderBy('created_at', 'desc')->get();
+       $tickets=Ticket::where('agent_id',"=",auth()->user()->id)->get();
+      //dd($tickets);
+      $CountOfOpenTicket=Ticket::where('agent_id',"=",auth()->user()->id)->where('progress',"=","open")->count();
+      $CountOfTicket=Ticket::where('agent_id',"=",auth()->user()->id)->count();
+     
+        $InfromationArray=Array(
+            'tickets'=>$tickets,
+            'openticket'=>$CountOfOpenTicket,
+            'countticket'=>$CountOfTicket
+        );
+        return view('IwDepartmentAdmin.profile',$InfromationArray);
+    }
+
+
+    public  function UpdateTaskToUser(Request $request)
+    {
+        # code...
+
+
+
+        $validator = Validator::make($request->all(), [
+            'id' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+
+            return redirect()->back();
+        }
+
+
+        $ticket=Ticket::find($request->id);
+        $ticket->agent_comment=$request->userameComment;
+        $ticket->progress=$request->status;
+        $ticket->save();
+
+        return redirect()->back();
+
+
+    }
+
+
+
 }

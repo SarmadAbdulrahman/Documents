@@ -7,7 +7,7 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="fa fa-home"></i>
-                    <a href="#">Client Agent</a>
+                    <a href="/IwDepartmentAdmin">IwDepartmentAdmin</a>
                 </li>
                 <li>
                     <a href="#">Show Ticket</a>
@@ -20,7 +20,7 @@
         <div class="page-header position-relative">
             <div class="header-title">
                 <h1>
-                    Client Agent
+                IwDepartmentAdmin Agent
                     <small>
                         <i class="fa fa-angle-right"></i>
                         Tickets
@@ -29,7 +29,7 @@
             </div>
             <!--Header Buttons-->
             <div class="header-buttons">
-                <a class="sidebar-toggler" href="#">
+                <a class="sidebar-toggler" href="/IwDepartmentAdmin">
                     <i class="fa fa-arrows-h"></i>
                 </a>
                 <a class="refresh" id="refresh-toggler" href="/IwDepartmentAdmin">
@@ -103,7 +103,7 @@
                                         <td>
                                             <a href="{{url('IwDepartmentAdmin/GetDetails?id=')}}{{$ticket->id}}" class=" btn btn-success"> {{ trans('messages.GetDetails') }}</a>
                                             <a id="{{$ticket->id}}" class=" btn btn-danger AssignEmp"> {{ trans('messages.AssignAgent') }}</a>
-
+                                            <a id="{{$ticket->id}}" class=" btn btn-primary cc"> comment</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -147,6 +147,74 @@
                             <!-- Modal -->
 
 
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel2">Update Case</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <form class="form-inline" method="post" action="{{url('IwDepartmentAdmin/UpdateTaskToUser')}}">
+                                            @csrf
+                                            <div class="modal-body">
+
+                                                <div class="form-group">
+                                                  
+                                                    <input type="hidden" class="id" name="id" >
+                                                </div>
+
+
+                                                              <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" class="form-control" name="userameComment" id="userameInput" placeholder="Comment">
+                                                  
+                                                </span>
+                                            </div>
+
+
+
+                                                <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" class="form-control" name="status" id="userameInput" placeholder="status">
+                                                 
+                                                </span>
+                                            </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         </div>
                     </div>
                 </div>
@@ -174,6 +242,22 @@
 
 
             });
+
+
+
+
+
+
+                $('body').on('click','.cc',function () {
+
+
+                            var TicketID=$(this).attr('id');
+
+                            $('.id').val(TicketID);
+                            $('#exampleModal2').modal('show');
+
+
+});
 
         });
     </script>

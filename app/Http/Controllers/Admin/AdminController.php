@@ -208,7 +208,16 @@ class AdminController extends Controller
     {
 
 
-        $tickets=Ticket::all();
+        $tickets=Ticket::leftjoin('departments','tickets.department_id','departments.id')
+        ->join('ticket_types','tickets.ticket_type_id','ticket_types.id')
+        ->join('users','tickets.user_id','users.id')
+        ->leftjoin('users as agent','tickets.agent_id','agent.id')
+        ->select('tickets.id','tickets.created_at','tickets.issue_name'
+        ,'tickets.progress','tickets.agent_comment','users.name as Client_name'
+        ,'departments.name as department','ticket_types.ar_name','agent.name as agent_name')->get();
+
+
+
 
 
        return response()->json(['tickets'=>$tickets],200);

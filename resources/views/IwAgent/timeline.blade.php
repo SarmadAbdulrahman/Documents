@@ -55,7 +55,7 @@
                                     <input type="hidden" name="id" value="{{$id}}">
                                     <div class="form-group ">
                                         <label class="sr-only" for="exampleInputEmail2">Comment</label>
-                                        <textarea name="reply" id="editor" cols="150" rows="2"></textarea>
+                                        <textarea name="reply" id="" cols="150" rows="2"></textarea>
                                     </div>
 
                                     <button type="submit" class="btn btn-default">Reply</button>
@@ -108,7 +108,7 @@
                                         </p>
                                     </div>
                                     <div class="timeline-body" >
-                                        {!!$TicketDetail->agent_comment!!}
+                                        {$TicketDetail->agent_comment}
                                     </div>
                                 </div>
                             </li>

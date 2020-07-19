@@ -133,7 +133,7 @@ Route::group(['prefix'=>'TaskManager','middleware' => ['role:TaskManager']], fun
 
 
 Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentAdmin']], function () {
-   
+   // UpdateTaskToUser
 
     Route::get('/','IwDepartmentAdmin\IwDepartmentAdminController@index');
     Route::get('/GetDetails','IwDepartmentAdmin\IwDepartmentAdminController@GetDetails');
@@ -141,6 +141,8 @@ Route::group(['prefix'=>'IwDepartmentAdmin','middleware' => ['role:IwDepartmentA
     Route::post('/AssingTaskToUser','IwDepartmentAdmin\IwDepartmentAdminController@AssingTaskToUser');
     Route::get('/News','IwDepartmentAdmin\IwDepartmentAdminController@News');
     Route::post('/StoreNews','IwDepartmentAdmin\IwDepartmentAdminController@StoreNews');
+    Route::get('/profile','IwDepartmentAdmin\IwDepartmentAdminController@profile');
+    Route::post('/UpdateTaskToUser','IwDepartmentAdmin\IwDepartmentAdminController@UpdateTaskToUser');
 
 });
 

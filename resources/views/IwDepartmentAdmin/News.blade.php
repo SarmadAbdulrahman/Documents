@@ -7,7 +7,7 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="fa fa-home"></i>
-                    <a href="#">Iw Agent</a>
+                    <a href="/IwDepartmentAdmin">Iw IwDepartmentAdmin</a>
                 </li>
                 <li>
                     <a href="#"> News & Documents</a>
@@ -32,10 +32,10 @@
                 <a class="sidebar-toggler" href="#">
                     <i class="fa fa-arrows-h"></i>
                 </a>
-                <a class="refresh" id="refresh-toggler" href="/iwAgent">
+                <a class="refresh" id="refresh-toggler" href="/IwDepartmentAdmin">
                     <i class="glyphicon glyphicon-refresh"></i>
                 </a>
-                <a class="fullscreen" id="fullscreen-toggler" href="#">
+                <a class="fullscreen" id="fullscreen-toggler" href="/IwDepartmentAdmin">
                     <i class="glyphicon glyphicon-fullscreen"></i>
                 </a>
             </div>
