@@ -13,8 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::post('/PostRequest','ClinetController@PostRequest')->name('PostRequest');
+Route::get('/','ClinetController@CreateView');
+
+
+
+
+
+
+// PostRequest
+
+Route::get('/slogin', function () {
+    return view('login');
 });
 
 
