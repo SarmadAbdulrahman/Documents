@@ -153,15 +153,15 @@
                 columns: [
                   { text: 'Date', datafield: 'range', filtertype: 'range', cellsalign: 'left', width: '15%', cellsformat: 'd' },
                   { text: 'ticketId', columngroup: 'ProductDetails', datafield: 'id', width: '5%' },
-                  { text: 'ticketStatus', columngroup: 'ProductDetails', datafield: 'progress', cellsalign: 'right', align: 'right', width: 200 },
-                  { text: 'issue_name', columngroup: 'ProductDetails', datafield: 'issue_name', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
-                  { text: 'agent_comment', columngroup: 'ProductDetails', datafield: 'agent_comment', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
+                  { text: 'ticketStatus', columngroup: 'ProductDetails', datafield: 'progress', cellsalign: 'right', align: 'right', width: '25%' },
+                  { text: 'issue_name', columngroup: 'ProductDetails', datafield: 'issue_name', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: '25%' },
+                  { text: 'agent_comment', columngroup: 'ProductDetails', datafield: 'agent_comment', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: '25%' },
 
 
-           { text: 'department', columngroup: 'ProductDetails', datafield: 'department', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
-           { text: 'ticketType', columngroup: 'ProductDetails', datafield: 'ar_name', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
-           { text: 'agent_name', columngroup: 'ProductDetails', datafield: 'agent_name', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
-           { text: 'Client_name', columngroup: 'ProductDetails', datafield: 'Client_name', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
+           { text: 'department', columngroup: 'ProductDetails', datafield: 'department', align: 'right', cellsalign: 'right', cellsformat: 'c2', width:'25%' },
+           { text: 'ticketType', columngroup: 'ProductDetails', datafield: 'ar_name', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: '25%'},
+           { text: 'agent_name', columngroup: 'ProductDetails', datafield: 'agent_name', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: '25%' },
+           { text: 'Client_name', columngroup: 'ProductDetails', datafield: 'Client_name', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: '25%' },
 
 
 

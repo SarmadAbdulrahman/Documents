@@ -118,11 +118,6 @@
                         </li>
 
 
-                        <li>
-                            <a href="#">
-                                <span class="menu-text">Reset Password</span>
-                            </a>
-                        </li>
 
                     </ul>
                 </li>
@@ -144,11 +139,7 @@
 
 
 
-                         <li>
-                            <a href="{{url('SystemAdministrator/TicketDetials')}}">
-                                <span class="menu-text">Ticket Detials</span>
-                            </a>
-                        </li>
+                   
 
 
                     </ul>

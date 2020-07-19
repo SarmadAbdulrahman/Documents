@@ -108,7 +108,7 @@
                                         </p>
                                     </div>
                                     <div class="timeline-body">
-                                        <p>{$TicketDetail->agent_comment}}</p>
+                                        <p>{{$TicketDetail->agent_comment}}</p>
                                     </div>
                                 </div>
                             </li>
