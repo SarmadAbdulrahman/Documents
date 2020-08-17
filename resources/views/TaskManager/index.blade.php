@@ -45,7 +45,7 @@
         <!-- Page Body -->
 
         <div class="row">
-            <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12 col-md-12  col-lg-12">
                 <div class="widget">
                     <div class="widget-header  with-footer">
                         <span class="widget-caption">Tickets Progress</span>
@@ -61,6 +61,52 @@
                             </a>
                         </div>
                     </div>
+
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="{{url('TaskManager/AssingDepartment')}}">
+     
+          <div class="form-group">
+          <select class="form-control  Roles" name="Department">
+                                                    @foreach($Departments as $Department)
+                                                        <option value="{{$Department->id}}">{{$Department->name}}</option>
+                                                    @endforeach
+            </select>
+            @csrf
+
+              <input type="hidden" class="id" name="id" >
+          </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Send message</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
                     <div class="widget-body">
 
                         <div class="flip-scroll">
@@ -108,7 +154,24 @@
                                             @else
                                             <td>no</td>
                                         @endif
+
+                                           @if($ticket->progress=='open')
+
+                                        @if($ticket->department_id== '')
+
                                         <td><a  id="{{$ticket->id}}" class=" btn btn-success cc"> {{ trans('messages.Assigning') }}</a></td>
+
+                                        @else
+                                        <td><a  id="{{$ticket->id}}" class=" btn btn-danger cc"> {{ trans('messages.ReAssigning')}}</a></td>
+                                        @endif
+
+
+                                        @elseif($ticket->progress!='open')
+                                        <td>Solved</td>
+                                        @else
+                                            <td>no</td>
+                                        @endif
+
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -126,18 +189,38 @@
                                             </button>
                                         </div>
                                         <form class="form-inline" method="post" action="{{url('TaskManager/AssingDepartment')}}">
-                                            @csrf
+                                         
                                         <div class="modal-body">
 
-                                            <div class="form-group">
-                                                <select class="form-control  input-lg Roles" name="Department">
-                                                    @foreach($Departments as $Department)
-                                                        <option value="{{$Department->id}}">{{$Department->name}}</option>
-                                                    @endforeach
-                                                </select>
-                                                <input type="hidden" class="id" name="id" >
-                                            </div>
 
+                           
+
+                                              <div class="row">
+                                              
+                                              <div class="col-xs-12 col-md-12  col-lg-12">
+                                              
+                                              
+                                              
+
+                                             
+
+
+
+                                              
+                                              
+                                              
+                                              </div>
+                                              </div>
+
+                             
+                                       
+
+
+
+
+
+
+                                          
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -148,6 +231,9 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
 
                             <!-- Modal -->
                         </div>
@@ -173,7 +259,7 @@
                 var TicketID=$(this).attr('id');
 
                 $('.id').val(TicketID);
-                $('#exampleModal').modal('show');
+                $('#exampleModal1').modal('show');
 
 
         });

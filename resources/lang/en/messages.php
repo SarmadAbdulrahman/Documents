@@ -32,6 +32,7 @@ return [
     'GetUserDetails'=>' View User',
     'ChangeUserDepartment'=>' Change User Department',
     'AssignAgent'=>'Assing Employee',
+    'ReAssigning'=>'ReAssing Department',
 
 ];
 ?>

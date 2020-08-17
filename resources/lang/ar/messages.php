@@ -35,6 +35,7 @@ return [
     'ChangeRoleAction'=>'تغيير صلاحيه المتسخدم ',
     'ChangeUserPassword'=>'اعاده تعيين كلمه المرور',
      'ChangeUserDepartment'=>' تعيين مدير القسم',
+     'ReAssigning'=>'اعاده تعيين القسم',
 
 ];
 ?>
