@@ -27,8 +27,6 @@
 
 
 
-
-    <script type="text/javascript" src="{{asset("assets/js/scripts/jquery-1.11.1.min.js")}}"></script>
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxcore.js")}}"></script>
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxdata.js")}}"></script> 
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxbuttons.js")}}"></script>
@@ -64,9 +62,6 @@
 
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxdata.export.js")}}"></script>
     <script type="text/javascript" src="{{asset("assets/js/jqwidgets/jqwidgets/jqxgrid.export.js")}}"></script>
-
-
-
 @yield('js')
 @endsection
 
