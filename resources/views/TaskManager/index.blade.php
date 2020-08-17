@@ -96,17 +96,6 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
                     <div class="widget-body">
 
                         <div class="flip-scroll">
